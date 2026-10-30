@@ -1,0 +1,460 @@
+[
+  {
+    "id": 1,
+    "slug": "fiorella",
+    "nombre": "Fiorella Alarcón",
+    "rol": "Product & Frontend",
+    "ciudad": "Posadas",
+    "edad": 28,
+    "github": "https://github.com/fiorellaalarcon/",
+    "email": "alarconfiorellamelina@gmail.com",
+    "resumen": "Perfil orientado a construir soluciones confiables para logística inteligente, con foco en Product & Frontend.",
+    "avatar": "fiorella.webp",
+    "avatar400": "fiorella-400.webp",
+    "avatarAlt": "Avatar ilustrado de Fiorella Alarcón",
+    "habilidades": [
+      {
+        "icon": "html5-plain",
+        "nombre": "HTML5"
+      },
+      {
+        "icon": "css3-plain",
+        "nombre": "CSS3"
+      },
+      {
+        "icon": "javascript-plain",
+        "nombre": "JavaScript"
+      },
+      {
+        "icon": "github-original",
+        "nombre": "GitHub",
+        "mono": true
+      }
+    ],
+    "peliculas": [
+      {
+        "titulo": "Red social",
+        "anio": 2010,
+        "imagen": "red-social.webp",
+        "alt": "Póster de Red social (2010)"
+      },
+      {
+        "titulo": "Parásitos",
+        "anio": 2019,
+        "imagen": "parasitos.webp",
+        "alt": "Póster de Parásitos (2019)"
+      },
+      {
+        "titulo": "El Señor de los Anillos: El Retorno del Rey",
+        "anio": 2003,
+        "imagen": "el-retorno-del-rey.webp",
+        "alt": "Póster de El Señor de los Anillos: El Retorno del Rey (2003)"
+      }
+    ],
+    "discos": [
+      {
+        "titulo": "ARIRANG",
+        "artista": "BTS",
+        "anio": 2026,
+        "imagen": "bts-arirang.webp",
+        "alt": "Portada de ARIRANG de BTS",
+        "embedUrl": "https://open.spotify.com/embed/album/3ukkRHDHbN8tNRPKsGZR1h?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/3ukkRHDHbN8tNRPKsGZR1h"
+      },
+      {
+        "titulo": "Spirited Away",
+        "artista": "Joe Hisaishi",
+        "anio": 2001,
+        "imagen": "joe-hisaishi-spirited-away.webp",
+        "alt": "Portada de Spirited Away de Joe Hisaishi",
+        "embedUrl": "https://open.spotify.com/embed/album/766a5fKJYFy9ii4Kz2bQy9?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/766a5fKJYFy9ii4Kz2bQy9"
+      },
+      {
+        "titulo": "folklore",
+        "artista": "Taylor Swift",
+        "anio": 2020,
+        "imagen": "taylor-swift-folklore.webp",
+        "alt": "Portada de folklore de Taylor Swift",
+        "embedUrl": "https://open.spotify.com/embed/album/2fenSS68JI1h4Fo296JfGr?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr"
+      }
+    ],
+    "demo": {
+      "titulo": "Interacción de rol · Frontend",
+      "boton": "Ejecutar demo",
+      "frases": [
+        "UI validada: contraste, foco de teclado y jerarquía revisados.",
+        "Componente responsive probado en 400, 900 y 1200 px.",
+        "Navegación accesible: etiquetas y estados ARIA verificados.",
+        "Prototipo listo para iterar con feedback del equipo."
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "axel",
+    "nombre": "Axel Alva",
+    "rol": "Backend Developer",
+    "ciudad": "CABA",
+    "edad": 32,
+    "github": "https://github.com/axelalva2023/",
+    "email": "axelalva2021@gmail.com",
+    "resumen": "Perfil orientado a construir soluciones confiables para logística inteligente, con foco en Backend Developer.",
+    "avatar": "axel.webp",
+    "avatar400": "axel-400.webp",
+    "avatarAlt": "Avatar ilustrado de Axel Alva",
+    "habilidades": [
+      {
+        "icon": "javascript-plain",
+        "nombre": "JavaScript"
+      },
+      {
+        "icon": "nodejs-plain",
+        "nombre": "Node.js"
+      },
+      {
+        "icon": "git-plain",
+        "nombre": "Git"
+      },
+      {
+        "icon": "mongodb-plain",
+        "nombre": "MongoDB"
+      }
+    ],
+    "peliculas": [
+      {
+        "titulo": "El conjuro",
+        "anio": 2013,
+        "imagen": "el-conjuro.webp",
+        "alt": "Póster de El conjuro (2013)"
+      },
+      {
+        "titulo": "Annabelle",
+        "anio": 2014,
+        "imagen": "anabelle.webp",
+        "alt": "Póster de Annabelle (2014)"
+      },
+      {
+        "titulo": "La monja",
+        "anio": 2018,
+        "imagen": "la-monja.webp",
+        "alt": "Póster de La monja (2018)"
+      }
+    ],
+    "discos": [
+      {
+        "titulo": "Fórmula, Vol. 2",
+        "artista": "Romeo Santos",
+        "anio": 2014,
+        "imagen": "romeo-santos-formula.webp",
+        "alt": "Portada de Fórmula, Vol. 2 de Romeo Santos",
+        "embedUrl": "https://open.spotify.com/embed/album/5OO6azDhasEVJVj92uXpVF?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/5OO6azDhasEVJVj92uXpVF"
+      },
+      {
+        "titulo": "Un Verano Sin Ti",
+        "artista": "Bad Bunny",
+        "anio": 2022,
+        "imagen": "un-verano-sin-ti-bad-bunny.webp",
+        "alt": "Portada de Un Verano Sin Ti de Bad Bunny",
+        "embedUrl": "https://open.spotify.com/embed/album/3RQQmkQEvNCY4prGKE6oc5?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/3RQQmkQEvNCY4prGKE6oc5"
+      },
+      {
+        "titulo": "En Boca de Tantos",
+        "artista": "Porta",
+        "anio": 2008,
+        "imagen": "porta-en-boca-de-tantos.webp",
+        "alt": "Portada de En Boca de Tantos de Porta",
+        "embedUrl": "https://open.spotify.com/embed/album/6eY4fC2JweS1wKoyba32Tw?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/6eY4fC2JweS1wKoyba32Tw"
+      }
+    ],
+    "demo": {
+      "titulo": "Interacción de rol · Backend",
+      "boton": "Ejecutar demo",
+      "frases": [
+        "API health: 200 OK · latencia simulada 84 ms.",
+        "MongoDB conectado · consulta de prueba completada.",
+        "Endpoint /orders validado con respuesta JSON.",
+        "Backend listo para integrar el siguiente servicio."
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "malena",
+    "nombre": "Malena Jasque",
+    "rol": "UX/UI & QA",
+    "ciudad": "Posadas",
+    "edad": 40,
+    "github": "https://github.com/malenajasque/",
+    "email": "malenajasquec@gmail.com",
+    "resumen": "Perfil orientado a construir soluciones confiables para logística inteligente, con foco en UX/UI & QA.",
+    "avatar": "malena.webp",
+    "avatar400": "malena-400.webp",
+    "avatarAlt": "Avatar ilustrado de Malena Jasque",
+    "habilidades": [
+      {
+        "icon": "figma",
+        "nombre": "Figma",
+        "custom": "figma"
+      },
+      {
+        "icon": "html5-plain",
+        "nombre": "HTML5"
+      },
+      {
+        "icon": "css3-plain",
+        "nombre": "CSS3"
+      },
+      {
+        "icon": "javascript-plain",
+        "nombre": "JavaScript"
+      }
+    ],
+    "peliculas": [
+      {
+        "titulo": "The Matrix",
+        "anio": 1999,
+        "imagen": "matrix.webp",
+        "alt": "Póster de The Matrix (1999)"
+      },
+      {
+        "titulo": "A.I. Inteligencia Artificial",
+        "anio": 2001,
+        "imagen": "ai.webp",
+        "alt": "Póster de A.I. Inteligencia Artificial (2001)"
+      },
+      {
+        "titulo": "Harriet",
+        "anio": 2019,
+        "imagen": "harriet.webp",
+        "alt": "Póster de Harriet (2019)"
+      }
+    ],
+    "discos": [
+      {
+        "titulo": "Harry's House",
+        "artista": "Harry Styles",
+        "anio": 2022,
+        "imagen": "harry-stylesharrys-house.webp",
+        "alt": "Portada de Harry's House de Harry Styles",
+        "embedUrl": "https://open.spotify.com/embed/album/5r36AJ6VOJtp00oxSkBZ5h?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/5r36AJ6VOJtp00oxSkBZ5h"
+      },
+      {
+        "titulo": "Shepherd Moons",
+        "artista": "Enya",
+        "anio": 1991,
+        "imagen": "enya-shepherd-moons.webp",
+        "alt": "Portada de Shepherd Moons de Enya",
+        "embedUrl": "https://open.spotify.com/embed/album/3SkCmzvX7X6li6Ox0fzyaa?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/3SkCmzvX7X6li6Ox0fzyaa"
+      },
+      {
+        "titulo": "Healing Is a Miracle",
+        "artista": "Julianna Barwick",
+        "anio": 2020,
+        "imagen": "julianna-barwick-healing-is-a-miracle.webp",
+        "alt": "Portada de Healing Is a Miracle de Julianna Barwick",
+        "embedUrl": "https://open.spotify.com/embed/album/4GaLdSDDbRK0CoJKSnihbo?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/4GaLdSDDbRK0CoJKSnihbo"
+      }
+    ],
+    "demo": {
+      "titulo": "Interacción de rol · UX/UI & QA",
+      "boton": "Ejecutar demo",
+      "frases": [
+        "QA audit: 12 checks ejecutados · 0 bloqueantes.",
+        "2 mejoras UX detectadas y priorizadas para revisión.",
+        "Flujo de formulario validado con teclado y foco visible.",
+        "Checklist de calidad completado para la entrega."
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "javier",
+    "nombre": "Javier Churquina",
+    "rol": "Data & Routing",
+    "ciudad": "CABA",
+    "edad": 40,
+    "github": "https://github.com/Freddy1537/",
+    "email": "beboaven@gmail.com",
+    "resumen": "Perfil orientado a construir soluciones confiables para logística inteligente, con foco en Data & Routing.",
+    "avatar": "javier.webp",
+    "avatar400": "javier-400.webp",
+    "avatarAlt": "Avatar ilustrado de Javier Churquina",
+    "habilidades": [
+      {
+        "icon": "python-plain",
+        "nombre": "Python"
+      },
+      {
+        "icon": "mysql-original",
+        "nombre": "MySQL"
+      },
+      {
+        "icon": "apachekafka-original",
+        "nombre": "Apache Kafka",
+        "mono": true
+      },
+      {
+        "icon": "salesforce-plain",
+        "nombre": "Salesforce"
+      }
+    ],
+    "peliculas": [
+      {
+        "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+        "anio": 2001,
+        "imagen": "la-comunidad-del-anillo.webp",
+        "alt": "Póster de El Señor de los Anillos: La Comunidad del Anillo (2001)"
+      },
+      {
+        "titulo": "Oblivion",
+        "anio": 2013,
+        "imagen": "oblivion.webp",
+        "alt": "Póster de Oblivion (2013)"
+      },
+      {
+        "titulo": "La isla",
+        "anio": 2005,
+        "imagen": "la-isla.webp",
+        "alt": "Póster de La isla (2005)"
+      }
+    ],
+    "discos": [
+      {
+        "titulo": "Appetite for Destruction",
+        "artista": "Guns N' Roses",
+        "anio": 1987,
+        "imagen": "appetite-for-destruction-guns-and-roses.webp",
+        "alt": "Portada de Appetite for Destruction de Guns N' Roses",
+        "embedUrl": "https://open.spotify.com/embed/album/1oR3KrPIp4CbagPa3PhtPp?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/1oR3KrPIp4CbagPa3PhtPp"
+      },
+      {
+        "titulo": "Toys in the Attic",
+        "artista": "Aerosmith",
+        "anio": 1975,
+        "imagen": "aerosmith-toys-in-the-attic.webp",
+        "alt": "Portada de Toys in the Attic de Aerosmith",
+        "embedUrl": "https://open.spotify.com/embed/album/6As5aOEQjfxLIChIB3fQRD?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/6As5aOEQjfxLIChIB3fQRD"
+      },
+      {
+        "titulo": "Hybrid Theory",
+        "artista": "Linkin Park",
+        "anio": 2000,
+        "imagen": "linkin-park-hybrid-theory.webp",
+        "alt": "Portada de Hybrid Theory de Linkin Park",
+        "embedUrl": "https://open.spotify.com/embed/album/2pKw6GERJVAD61449B1EEM?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/2pKw6GERJVAD61449B1EEM"
+      }
+    ],
+    "demo": {
+      "titulo": "Interacción de rol · Data & Routing",
+      "boton": "Ejecutar demo",
+      "frases": [
+        "Ruta A optimizada: 19% menos kilómetros simulados.",
+        "3 vehículos agrupados por zona y ventana horaria.",
+        "Cadena de frío monitorizada cada 5 minutos.",
+        "Matriz de costos preparada para comparar alternativas."
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "slug": "selene",
+    "nombre": "Selene Pais",
+    "rol": "DevOps & Docs",
+    "ciudad": "CABA",
+    "edad": 32,
+    "github": "https://github.com/Selepais/",
+    "email": "sele.pais@gmail.com",
+    "resumen": "Perfil orientado a construir soluciones confiables para logística inteligente, con foco en DevOps & Docs.",
+    "avatar": "selene.webp",
+    "avatar400": "selene-400.webp",
+    "avatarAlt": "Avatar ilustrado de Selene Pais",
+    "habilidades": [
+      {
+        "icon": "docker-plain",
+        "nombre": "Docker"
+      },
+      {
+        "icon": "markdown-original",
+        "nombre": "Markdown"
+      },
+      {
+        "icon": "css3-plain",
+        "nombre": "CSS3"
+      },
+      {
+        "icon": "terraform-plain",
+        "nombre": "Terraform"
+      }
+    ],
+    "peliculas": [
+      {
+        "titulo": "Diario de una pasión",
+        "anio": 2004,
+        "imagen": "diario-de-una-pasion.webp",
+        "alt": "Póster de Diario de una pasión (2004)"
+      },
+      {
+        "titulo": "Crepúsculo",
+        "anio": 2008,
+        "imagen": "crepusculo.webp",
+        "alt": "Póster de Crepúsculo (2008)"
+      },
+      {
+        "titulo": "Titanic",
+        "anio": 1997,
+        "imagen": "titanic.webp",
+        "alt": "Póster de Titanic (1997)"
+      }
+    ],
+    "discos": [
+      {
+        "titulo": "A Rush of Blood to the Head",
+        "artista": "Coldplay",
+        "anio": 2002,
+        "imagen": "coldplay-a-rush-of-blood-to-the-head.webp",
+        "alt": "Portada de A Rush of Blood to the Head de Coldplay",
+        "embedUrl": "https://open.spotify.com/embed/album/0RHX9XECH8IVI3LNgWDpmQ?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/0RHX9XECH8IVI3LNgWDpmQ"
+      },
+      {
+        "titulo": "Destinología",
+        "artista": "Tan Biónica",
+        "anio": 2013,
+        "imagen": "tan-bionica-destinologia.webp",
+        "alt": "Portada de Destinología de Tan Biónica",
+        "embedUrl": "https://open.spotify.com/embed/album/64R3tRaDrsBL3DvBrHSx8C?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/64R3tRaDrsBL3DvBrHSx8C"
+      },
+      {
+        "titulo": "Libertad",
+        "artista": "Airbag",
+        "anio": 2013,
+        "imagen": "airbag-libertad.webp",
+        "alt": "Portada de Libertad de Airbag",
+        "embedUrl": "https://open.spotify.com/embed/album/44V33dl0drKUZAcrGcL0sN?utm_source=generator",
+        "spotifyUrl": "https://open.spotify.com/album/44V33dl0drKUZAcrGcL0sN"
+      }
+    ],
+    "demo": {
+      "titulo": "Interacción de rol · DevOps & Docs",
+      "boton": "Ejecutar demo",
+      "frases": [
+        "Pipeline simulado: lint → test → build → deploy.",
+        "Documentación técnica preparada para el equipo.",
+        "Build verificado: artefactos listos para publicación.",
+        "Pipeline estable: siguiente ejecución preparada."
+      ]
+    }
+  }
+]
