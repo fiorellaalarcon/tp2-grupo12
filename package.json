@@ -1,0 +1,26 @@
+{
+  "name": "tp2-grupo12",
+  "private": true,
+  "version": "2.0.0",
+  "description": "TP2 · Grupo 12 · Eximia Code. SPA con React 19.3, React Router 8 y Vite 8.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "oxlint src"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router": "8.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.1.2",
+    "oxlint": "1.90.0",
+    "vite": "8.3.5"
+  }
+}
