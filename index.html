@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- METADATOS BÁSICOS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eximia Code · Grupo 12 · TP2</title>
+  <meta name="description" content="Eximia Code · Grupo 12 · TP2: SPA en React 19.3 para logística inteligente B2B.">
+  <meta name="author" content="Grupo 12 · Eximia Code">
+  <meta name="theme-color" content="#00684D">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/webp" href="/img/logo-96.webp">
+
+  <!-- REDES SOCIALES (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Eximia Code · Grupo 12 · TP2">
+  <meta property="og:description" content="SPA en React 19.3 + React Router 8 + Vite 8 para logística inteligente B2B.">
+  <meta property="og:image" content="https://tp2-grupo-12.vercel.app/img/panel.webp">
+
+  <!-- TEMA: se aplica antes de pintar para evitar el parpadeo claro→oscuro (misma clave que el TP1) -->
+  <script>
+    try {
+      var t = localStorage.getItem('eximia-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+
+  <!-- TIPOGRAFÍAS: Google Fonts (preconnect + display=swap) e iconos Devicon con versión fija -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Orbitron:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+</head>
+<body id="top">
+  <!-- Punto de montaje de React -->
+  <div id="root"></div>
+  <noscript>Este sitio es una aplicación React: necesita JavaScript habilitado.</noscript>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
