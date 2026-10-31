@@ -1,0 +1,14 @@
+/* ==========================================================================
+   13 · API PÚBLICA (Open-Meteo): tarjetas de clima y estados
+   ========================================================================== */
+.api-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; margin-bottom: 1rem; }
+.api-state { padding: 1rem 1.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-surface); }
+.api-state--error { border-color: var(--error-color); color: var(--text-primary); }
+.api-state--error p { margin-top: 0; }
+.weather-card { padding: 1.1rem; border: 1px solid var(--border-color); border-left-width: 6px; border-radius: var(--radius-md); background: var(--bg-surface); display: grid; gap: .25rem; }
+.weather-card h3 { margin: 0; }
+.weather-card p { margin: 0; }
+.weather-temp { font-family: var(--heading); font-size: 2rem; font-weight: 700; }
+.risk-bajo { border-left-color: var(--accent-primary); }
+.risk-medio { border-left-color: var(--accent-secondary); }
+.risk-alto { border-left-color: var(--error-color); }
