@@ -1,0 +1,40 @@
+/* ==========================================================================
+   12 · ÁRBOL DE RENDERIZADO Y MEJORAS DE BITÁCORA
+   ========================================================================== */
+.tree-root, .tree-children { list-style: none; margin: 0; padding: 0; }
+.tree-children { margin-left: 1rem; padding-left: 1rem; border-left: 2px solid var(--border-color); }
+.tree-node { padding: .35rem 0; }
+.tree-row { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .75rem; }
+.tree-toggle { display: inline-flex; align-items: center; gap: .35rem; min-height: 40px; padding: .25rem .6rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-surface); color: var(--text-primary); font: inherit; cursor: pointer; }
+.tree-toggle:hover { border-color: var(--accent-secondary); }
+.tree-toggle .icon { transition: transform .2s; }
+.tree-toggle.is-open .icon { transform: rotate(90deg); }
+.tree-leaf { display: inline-flex; align-items: center; min-height: 40px; padding: .25rem .6rem .25rem 1.6rem; }
+.tree-file { font-size: .82rem; color: var(--text-secondary); overflow-wrap: anywhere; }
+.tree-desc { margin: .1rem 0 .25rem 1.6rem; font-size: .92rem; }
+.tree-meta { display: flex; flex-wrap: wrap; gap: .3rem; margin: 0 0 .25rem 1.6rem; }
+.legend { display: grid; gap: .6rem; padding-left: 1.2rem; }
+
+/* Registros desplegables de la bitácora */
+.stage-stack { display: grid; gap: .75rem; }
+.log-heading { margin: 0; font-size: inherit; }
+.log-toggle { width: 100%; display: flex; align-items: center; gap: 1rem; padding: .9rem 1rem; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; min-height: 44px; }
+.log-toggle:hover { background: var(--bg-secondary); }
+.log-toggle .icon { flex: none; margin-left: auto; transition: transform .2s; }
+.log-entry.is-open .log-toggle .icon { transform: rotate(90deg); }
+.log-head { display: grid; gap: .25rem; min-width: 0; }
+.log-title { font-family: var(--heading); font-size: 1.1rem; font-weight: 700; overflow-wrap: anywhere; }
+.log-types, .log-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+.log-type { font-size: .78rem; font-weight: 700; color: var(--accent-secondary); }
+.log-body { padding: 0 1rem 1rem; display: grid; gap: .75rem; }
+.log-filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; align-items: end; margin-bottom: 1rem; }
+.chip-group { display: flex; flex-wrap: wrap; gap: .4rem; border: 0; margin: 0; padding: 0; min-width: 0; grid-column: 1 / -1; }
+.chip-group legend { font-weight: 600; margin-bottom: .35rem; padding: 0; }
+.log-actions { display: flex; flex-wrap: wrap; gap: .5rem; grid-column: 1 / -1; }
+.stage-tabs { display: flex; gap: .4rem; margin-bottom: 1rem; }
+.load-more { text-align: center; margin-top: 1rem; }
+.log-source { color: var(--text-secondary); }
+.commit-history { display: grid; gap: .6rem; }
+.pr-select { max-width: 320px; margin-bottom: 1rem; }
+.checklist { list-style: none; padding: 0; display: grid; gap: .5rem; }
+@media (prefers-reduced-motion: reduce) { .log-toggle .icon, .tree-toggle .icon { transition: none; } }
