@@ -1,0 +1,19 @@
+/* ==========================================================================
+   11 · RECURSOS JSON (filtros y catálogo)
+   ========================================================================== */
+.filter-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; align-items: end; }
+.filter-bar .field select, .filter-bar .field input, .log-filters .field select, .log-filters .field input, .pr-select select { width: 100%; min-height: 44px; padding: .5rem .75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); background: var(--bg-primary); color: var(--text-primary); font: inherit; }
+.log-count { margin: 0 0 1rem; color: var(--text-secondary); font-weight: 500; }
+.catalog-card { border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-surface); box-shadow: var(--shadow-sm); overflow: hidden; }
+.catalog-card.is-open { border-color: var(--accent-secondary); }
+.catalog-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: .75rem; padding: 1rem; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; min-height: 44px; }
+.catalog-toggle:hover { background: var(--bg-secondary); }
+.catalog-main { display: grid; gap: .3rem; min-width: 0; justify-items: start; }
+.catalog-name { font-family: var(--heading); font-size: 1.1rem; overflow-wrap: anywhere; }
+.catalog-chevron { flex: none; transition: transform .2s; }
+.catalog-card.is-open .catalog-chevron { transform: rotate(90deg); }
+.catalog-detail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: 0; padding: 0 1rem 1rem; }
+.catalog-detail dt { font-size: .8rem; color: var(--text-secondary); font-weight: 600; }
+.catalog-detail dd { margin: 0; }
+.catalog-detail .full { grid-column: 1 / -1; }
+@media (prefers-reduced-motion: reduce) { .catalog-chevron { transition: none; } }
