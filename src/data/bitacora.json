@@ -1,0 +1,2002 @@
+{
+ "resumen": {
+  "TP1": [
+   {
+    "titulo": "1 · Definimos el problema y el concepto",
+    "texto": "**Hicimos:** retomamos la problemática de logística B2B y analizamos alternativas para el TP1. **Decidimos:** construir Eximia Code como empresa ficticia de software para mantener un mismo dominio entre materias."
+   },
+   {
+    "titulo": "2 · Organizamos el trabajo del equipo",
+    "texto": "**Hicimos:** distribuimos roles según las fortalezas y áreas técnicas de cada integrante. **Decidimos:** que cada perfil tuviera una responsabilidad y una interacción relacionada con ese rol."
+   },
+   {
+    "titulo": "3 · Diseñamos una base común",
+    "texto": "**Hicimos:** definimos identidad visual, arquitectura modular, navegación, responsive y accesibilidad. **Resolvimos:** el riesgo de que cinco perfiles parecieran sitios distintos mediante tokens, componentes y criterios compartidos."
+   },
+   {
+    "titulo": "4 · Pasamos de la planificación a ramas independientes",
+    "texto": "**Hicimos:** distribuimos la implementación en ramas por integrante. **Decidimos:** integrar mediante Pull Requests para conservar responsables, cambios y contexto de cada incorporación."
+   },
+   {
+    "titulo": "5 · Encontramos problemas durante la implementación",
+    "texto": "**Resolvimos:** overflow en pantallas pequeñas, carga innecesaria de multimedia, peso de imágenes, animaciones excesivas y estados de formularios. Cada problema se documenta junto con su solución y prueba."
+   },
+   {
+    "titulo": "6 · Integramos y verificamos",
+    "texto": "**Hicimos:** revisamos responsive, teclado, foco, accesibilidad, formularios, multimedia, navegación y documentación. **Decidimos:** conservar una instantánea de commits para que la bitácora siga siendo legible aunque GitHub no responda."
+   },
+   {
+    "titulo": "7 · Documentamos la trazabilidad",
+    "texto": "**Hicimos:** vinculamos etapas, responsables, commits y Pull Requests. **Resultado:** GitHub aporta la evidencia del cambio y esta página explica por qué se hizo y qué se aprendió."
+   },
+   {
+    "titulo": "8 · Cerramos con aprendizajes y continuidad",
+    "texto": "**Aprendimos:** que modularidad, accesibilidad, rendimiento y control de versiones deben considerarse durante el desarrollo. **Próximo paso:** trasladar estos criterios al TP2."
+   }
+  ],
+  "TP2": [
+   {
+    "titulo": "1 · Elegimos el stack",
+    "texto": "**Decidimos:** React 19.3.1, React Router 8.5.1, Vite 8.3.5 y Node 22.22, con versiones fijas y compatibles."
+   },
+   {
+    "titulo": "2 · Diseñamos la navegación",
+    "texto": "**Hicimos:** sidebar compartida con acceso a los 5 perfiles, header con migas y tema, y contacto como página propia."
+   },
+   {
+    "titulo": "3 · Separamos contenido, estructura y estilo",
+    "texto": "**Resolvimos:** JSON para los datos, JSX para la estructura y CSS por responsabilidad, como en el TP1."
+   },
+   {
+    "titulo": "4 · Migramos los perfiles",
+    "texto": "**Hicimos:** una única página reutilizable que recibe los datos por ruta, con ScrollSpy, películas clickeables y Spotify bajo demanda."
+   },
+   {
+    "titulo": "5 · Sumamos datos y API",
+    "texto": "**Hicimos:** catálogo de 24 clientes con búsqueda y filtros y clima en vivo de Open-Meteo con carga, error y reintento."
+   },
+   {
+    "titulo": "6 · Documentamos el código",
+    "texto": "**Hicimos:** árbol de renderizado expandible y bitácora con filtros, desplegables y trazabilidad de commits y Pull Requests."
+   },
+   {
+    "titulo": "7 · Integramos por Pull Requests",
+    "texto": "**Hicimos:** una rama por integrante, integradas en un orden que respeta las dependencias entre archivos."
+   },
+   {
+    "titulo": "8 · Cerramos con aprendizajes",
+    "texto": "**Aprendimos:** que en una SPA el foco, el teclado y la carga diferida se diseñan desde el principio."
+   }
+  ]
+ },
+ "registros": [
+  {
+   "id": "tp1-00",
+   "etapa": "TP1",
+   "numero": 0,
+   "fecha": "21–22/09",
+   "titulo": "Investigación y definición del proyecto",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Había que definir un estilo, producto y una problemática para el TP1. Pensamos en alternativas, entre ellas, relacionar el TP1 con el trabajo realizado en otras materias."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se retomó la problemática de logística B2B, distribución de productos gastronómicos refrigerados, pedidos, recorridos y trazabilidad."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Se eligió **Eximia Code** como empresa ficticia de software para mantener un mismo dominio y relacionar Frontend, Ingeniería de Software y Backend"
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Quedó definido el contexto del sitio. El equipo comprobó que antes de programar debía comprender el problema que la interfaz iba a representar."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "git",
+    "ia"
+   ]
+  },
+  {
+   "id": "tp1-01",
+   "etapa": "TP1",
+   "numero": 1,
+   "fecha": "22–23/09",
+   "titulo": "Definición de roles",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Los cinco integrantes necesitaban responsabilidades diferenciadas dentro de la empresa ficticia."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se relacionaron los perfiles personales con áreas técnicas que pudieran representarse también mediante una interacción."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Fiorella: Product & Frontend; Axel: Backend; Malena: UX/UI & QA; Javier: Data & Routing; Selene: DevOps & Docs. Los roles servirían como base narrativa y técnica."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Cada perfil adquirió un propósito dentro de Eximia Code. Se decidió que JavaScript debía demostrar una responsabilidad y no ser una animación decorativa."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "ia"
+   ]
+  },
+  {
+   "id": "tp1-02",
+   "etapa": "TP1",
+   "numero": 2,
+   "fecha": "22–24/09",
+   "titulo": "Identidad visual y Paleta Accesible (WCAG)",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Los cinco perfiles y los recursos visuales podían parecer sitios independientes, y la elección cromática debía garantizar contraste suficiente para todos los usuarios."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se buscaron criterios asociados a software B2B (logística y trazabilidad). Se evaluó el contraste bajo **WCAG 2.1 AA** y se adoptó la regla **60-30-10** para equilibrar fondos, componentes y focos de interacción."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Se definió un orden de producción (**logo → panel → avatares**) y se centralizó la paleta en tokens CSS. En modo claro destaca `#070D1F` sobre `#FFFFFF` y en modo oscuro `#FFFFFF` sobre `#0B132B` (superando la relación 4.5:1). Para acciones y focos visibles de teclado se fijaron acentos de alto contraste (`#D9381E` / `#FFB703`) sin basar la información únicamente en el color."
+    },
+    {
+     "titulo": "Dificultad → solución → resultado",
+     "texto": "La dificultad fue mantener la coherencia visual entre recursos heterogéneos sin perder legibilidad en modo oscuro. Se ajustaron los bordes a `#6B829B` y se validó la composición y contraste de cada avatar antes de su integración. Resultado: un lenguaje visual común, unificado y totalmente accesible."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "ia",
+    "diseño",
+    "react"
+   ]
+  },
+  {
+   "id": "tp1-03",
+   "etapa": "TP1",
+   "numero": 3,
+   "fecha": "23–25/09",
+   "titulo": "Arquitectura de archivos y CSS",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "El proyecto tendría portada, cinco perfiles, formularios, Bitácora, responsive, accesibilidad y múltiples interacciones."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se evaluó concentrar todo en un único CSS o separar responsabilidades."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Se eligió una arquitectura modular: `01-variables.css`, `02-base.css`, `03-layout.css`, `04-portada.css`, `05-perfil.css`, `06-formularios.css`, `07-bitacora.css`, `08-responsive.css` y `09-accesibilidad.css`."
+    },
+    {
+     "titulo": "Dificultad → solución → aprendizaje",
+     "texto": "Separar demasiado también podía complicar el mantenimiento. Se asignó una responsabilidad clara a cada archivo. La arquitectura se convirtió en una herramienta de colaboración."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "responsive",
+    "accesibilidad",
+    "formularios",
+    "diseño"
+   ]
+  },
+  {
+   "id": "tp1-04",
+   "etapa": "TP1",
+   "numero": 4,
+   "fecha": "24–26/09",
+   "titulo": "Arquitectura de navegación",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "El usuario no debía depender del botón Atrás del navegador para recorrer el sitio."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se definieron recorridos entre Inicio, Equipo, perfiles, secciones internas, contacto y regreso al equipo."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Menú principal, skip-link, anchor bar, tarjetas, Inicio, Volver a equipo y Anterior/Siguiente. Cada mecanismo tendría una función diferente para evitar redundancias."
+    },
+    {
+     "titulo": "Dificultad → solución → prueba",
+     "texto": "La dificultad era ofrecer muchas rutas sin confundir. Se separaron sus funciones y se verificó que ningún recorrido importante dependiera del navegador."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "navegación"
+   ]
+  },
+  {
+   "id": "tp1-05",
+   "etapa": "TP1",
+   "numero": 5,
+   "fecha": "25–27/09",
+   "titulo": "Responsive y accesibilidad",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "El sitio debía adaptarse a 400, 900 y 1200 px sin perder jerarquía ni generar desplazamiento horizontal."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se identificaron como componentes sensibles el menú, grillas, tarjetas, formularios, imágenes y navegación de perfiles."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Se utilizarían Grid, Flexbox, media queries, unidades relativas, `max-width` y reorganización de columnas. Se incorporaron foco visible, skip-link, ALT, labels, ARIA, `prefers-reduced-motion`, `prefers-contrast` y `forced-colors`."
+    },
+    {
+     "titulo": "Dificultad → solución → prueba",
+     "texto": "El riesgo principal era el overflow. Se planificó revisar cada breakpoint y el recorrido con Tab. El criterio de accesibilidad quedó incorporado desde el diseño, no como parche final."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "responsive",
+    "accesibilidad",
+    "ia",
+    "formularios"
+   ]
+  },
+  {
+   "id": "tp1-06",
+   "etapa": "TP1",
+   "numero": 6,
+   "fecha": "26–28/09",
+   "titulo": "Optimización de imágenes y multimedia",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Los avatares, posters, álbumes y recursos de portada podían aumentar innecesariamente el peso del sitio."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se evaluó el tamaño necesario según el contexto de uso y la densidad visual."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "WebP, versiones de 400 px, `srcset`, `sizes`, `loading=\"lazy\"`, dimensiones explícitas y precarga cuando correspondiera."
+    },
+    {
+     "titulo": "Dificultad → solución → aprendizaje",
+     "texto": "Reducir demasiado la resolución afectaba calidad. Se mantuvieron fuentes de mayor resolución para contextos principales y versiones más pequeñas para tarjetas. Optimizar significó equilibrar peso y calidad."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "ia",
+    "rendimiento",
+    "diseño"
+   ]
+  },
+  {
+   "id": "tp1-07",
+   "etapa": "TP1",
+   "numero": 7,
+   "fecha": "27–29/09",
+   "titulo": "Estructura común de perfiles",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Los cinco perfiles debían ser consistentes sin perder personalidad."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se definieron contenidos obligatorios y elementos de navegación compartidos."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Presentación, avatar, nombre, ciudad, edad, rol, habilidades, películas, discos, contacto, GitHub, navegación e interacción."
+    },
+    {
+     "titulo": "Dificultad → solución → resultado",
+     "texto": "Para evitar repetición visual se mantuvo la estructura pero se personalizaron contenidos, recursos y demos. La plantilla conceptual facilitó el trabajo de los cinco integrantes."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "navegación",
+    "diseño"
+   ]
+  },
+  {
+   "id": "tp1-08",
+   "etapa": "TP1",
+   "numero": 8,
+   "fecha": "28–29/09",
+   "titulo": "Definición de interacciones JavaScript",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "La consigna exigía interacción dinámica en portada y en cada perfil."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se decidió que las demos debían explicar el rol de cada integrante."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Fiorella: frontend/accesibilidad; Axel: backend/API; Malena: UX/UI/QA; Javier: datos/rutas; Selene: DevOps/documentación. El contenido dinámico se comunicaría con estados accesibles."
+    },
+    {
+     "titulo": "Dificultad → solución → prueba",
+     "texto": "Un único efecto habría sido repetitivo. Se definieron interacciones distintas y se comprobó su ejecución sin recargar la página."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "rendimiento"
+   ]
+  },
+  {
+   "id": "tp1-09",
+   "etapa": "TP1",
+   "numero": 9,
+   "fecha": "29/09",
+   "titulo": "IA y recursos visuales",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Se necesitaban recursos visuales consistentes y una documentación clara del uso de IA."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se evaluó el uso de IA para explorar logo, panel y avatares, manteniendo revisión humana."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Proceso: **generación → selección → revisión → adaptación → optimización → incorporación**. Los prompts se documentaron aparte para conservar trazabilidad."
+    },
+    {
+     "titulo": "Dificultad → solución → aprendizaje",
+     "texto": "La generación automática podía introducir recursos incoherentes. Se revisaron legibilidad, contraste, relación con el rol, dimensiones y peso. La IA se utilizó como asistente, no como sustituto de la autoría."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "ia",
+    "rendimiento",
+    "diseño"
+   ]
+  },
+  {
+   "id": "tp1-10",
+   "etapa": "TP1",
+   "numero": 10,
+   "fecha": "30/09",
+   "titulo": "Preparación colaborativa",
+   "responsable": "**Responsable:** Equipo Eximia Code",
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Cinco personas debían trabajar sobre un repositorio común sin perder trazabilidad, además, debíamos poder trabajar en horarios diferentes."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se revisó la distribución de responsabilidades y la necesidad de integrar cambios progresivamente."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Se utilizaron ramas `feat/fiorella`, `feat/malena`, `feat/javier`, `feat/axel` y `feat/selene`, integradas mediante Pull Requests + MERGE."
+    },
+    {
+     "titulo": "Dificultad → solución → aprendizaje",
+     "texto": "Podían aparecer conflictos. La modularidad y la división de responsabilidades redujeron el acoplamiento. El control de versiones pasó a formar parte de la metodología del proyecto."
+    }
+   ],
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "git"
+   ]
+  },
+  {
+   "id": "tp1-11",
+   "etapa": "TP1",
+   "numero": 11,
+   "fecha": "01/10 · Fiorella",
+   "titulo": "Fiorella Alarcón — estructura, portada y primer perfil",
+   "responsable": "**Responsable de implementación:** Fiorella Alarcón · Product & Frontend Engineer",
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "Había que crear una base reutilizable para que el resto del equipo pudiera continuar. Se decidió centralizar variables, tema, navegación, accesibilidad y componentes compartidos antes de sumar todos los perfiles."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Se incorporaron estructura semántica, portada, navegación responsive, skip-link, tema claro/oscuro, demo de rutas, perfil de Fiorella, tarjetas clickeables e imágenes optimizadas."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "La base debía ser suficientemente estable sin bloquear a los demás. Se modularizaron CSS y JS y se utilizaron patrones reutilizables."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se revisaron navegación, foco, responsive y funcionamiento del perfil. El trabajo se integró mediante **PR #1**. Aprendizaje: una base común clara reduce retrabajo posterior."
+    }
+   ],
+   "pr": {
+    "numero": 1,
+    "titulo": "feat: incorpora estructura base, portada y perfil de Fiorella",
+    "descripcion": "incorpora la base inicial del proyecto, portada, variables, navegación, accesibilidad, optimización de recursos, interacción de portada y perfil de Fiorella.",
+    "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/1"
+   },
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "responsive",
+    "accesibilidad",
+    "rendimiento",
+    "navegación"
+   ]
+  },
+  {
+   "id": "tp1-12",
+   "etapa": "TP1",
+   "numero": 12,
+   "fecha": "01/10 · Malena",
+   "titulo": "Malena Jasque — UX/UI, responsive y accesibilidad",
+   "responsable": "**Responsable de implementación:** Malena Jasque · UX/UI & QA",
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "La base necesitaba consolidar su comportamiento visual en móvil, tablet y escritorio. Se decidió trabajar breakpoints explícitos y preferencias de accesibilidad."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Se completaron estilos de header, menú, footer, portada, tarjetas, perfiles y formularios; se trabajaron 1200/900/400 px, foco, reduced motion, contraste, forced colors e impresión."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Las grillas y navegación podían romperse en pantallas pequeñas. Se reorganizaron columnas, espacios, tipografías y controles según breakpoint."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se verificaron los tres tamaños y estados de accesibilidad. El trabajo se integró mediante **PR #2**. Aprendizaje: responsive y accesibilidad deben comprobarse como comportamiento, no solo como estilos."
+    }
+   ],
+   "pr": {
+    "numero": 2,
+    "titulo": "feat: mejora UX/UI, responsive y agrega perfil de Malena",
+    "descripcion": "incorpora mejoras de UX/UI, accesibilidad y responsive junto con el perfil de Malena, recursos optimizados, formularios y preferencias de movimiento, contraste y color.",
+    "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/2"
+   },
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "responsive",
+    "accesibilidad",
+    "formularios",
+    "navegación"
+   ]
+  },
+  {
+   "id": "tp1-13",
+   "etapa": "TP1",
+   "numero": 13,
+   "fecha": "03/10 · Javier",
+   "titulo": "Javier Churquina — Data & Routing y Spotify",
+   "responsable": "**Responsable de implementación:** Javier Churquina · Data & Routing",
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "El perfil necesitaba representar datos y rutas y, además, ofrecer música sin penalizar la carga inicial. Se decidió cargar Spotify solamente cuando el usuario lo solicita."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Se incorporaron perfil, interacción de Data & Routing, recursos optimizados y Spotify bajo demanda."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Cargar iframes multimedia desde el inicio podía consumir recursos innecesariamente. Se creó el iframe bajo demanda y se mantuvo una alternativa de búsqueda cuando no había identificador."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se comprobó que la reproducción se activa sólo al solicitarla y que la navegación permanece estable. Se integró mediante **PR #3**. Aprendizaje: el rendimiento también forma parte de la experiencia de usuario."
+    }
+   ],
+   "pr": {
+    "numero": 3,
+    "titulo": "feat: incorpora integración de Spotify y perfil de Javier",
+    "descripcion": "incorpora el perfil de Javier, su interacción de Data & Routing y la integración multimedia bajo demanda para evitar iframes innecesarios.",
+    "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/3"
+   },
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "ia",
+    "rendimiento",
+    "navegación"
+   ]
+  },
+  {
+   "id": "tp1-14",
+   "etapa": "TP1",
+   "numero": 14,
+   "fecha": "03/10 · Axel",
+   "titulo": "Axel Alva — Backend y formularios accesibles",
+   "responsable": "**Responsable de implementación:** Axel Alva · Backend Developer",
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "El formulario debía validar información, comunicar errores y confirmar el resultado sin sacar al usuario de la página. Se decidió utilizar validación del lado del cliente y envío AJAX."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Se incorporaron perfil, interacción de Backend, validación, mensajes dinámicos, estados ARIA, gestión del foco y envío mediante FormSubmit AJAX."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "La experiencia debía comunicar estados sin depender de una recarga. Se añadieron mensajes de error, envío y confirmación, además de estado del botón y atributos accesibles."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se verificaron campos obligatorios, email, longitud mínima, estados y foco. Se integró mediante **PR #4**. Aprendizaje: la validación también debe ser comprensible para teclado y tecnologías de asistencia."
+    }
+   ],
+   "pr": {
+    "numero": 4,
+    "titulo": "feat: incorpora formularios accesibles y perfil de Axel",
+    "descripcion": "incorpora el perfil de Axel, interacción de Backend, validación accesible y envío AJAX con mensajes dinámicos, ARIA, foco y control del estado del botón.",
+    "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/4"
+   },
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "ia",
+    "formularios",
+    "rendimiento"
+   ]
+  },
+  {
+   "id": "tp1-15",
+   "etapa": "TP1",
+   "numero": 15,
+   "fecha": "04/10 y 05/10 · Selene",
+   "titulo": "Selene Pais — DevOps, documentación y Bitácora",
+   "responsable": "**Responsable de implementación:** Selene Pais · DevOps & Docs",
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "El proyecto necesitaba cerrar el proceso y hacer comprensible la evolución del trabajo. Se decidió integrar Bitácora, README, evidencias y el perfil de Selene como parte del mismo producto."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Se incorporaron perfil e interacción de DevOps & Docs, documentación de proceso, Bitácora, registro de ramas/commits/PR y próximos pasos."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Documentar todo podía generar una página extensa y difícil de leer. Se organizó el contenido por etapas, tarjetas y bloques de evidencia, manteniendo una versión sin dependencia de la API de GitHub."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se revisaron navegación, legibilidad, responsive, historial y documentación final. El cierre documental se preparó para **PR #5**. Aprendizaje: documentar el proceso obliga a justificar decisiones y hace visible el aprendizaje del equipo."
+    }
+   ],
+   "pr": {
+    "numero": 5,
+    "titulo": "docs: incorpora bitácora, documentación y perfil de Selene",
+    "descripcion": "incorpora el perfil de Selene, Bitácora, documentación, evidencias y cierre del proceso, conectando el relato con el historial del repositorio.",
+    "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/5"
+   },
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "responsive",
+    "git",
+    "ia",
+    "navegación"
+   ]
+  },
+  {
+   "id": "tp1-p1",
+   "etapa": "TP1",
+   "numero": 1,
+   "fecha": "Implementación",
+   "titulo": "Overflow horizontal",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "responsive",
+    "react"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "**Problema:** grillas, tablas o textos largos podían generar desplazamiento lateral. **Solución:** componentes con `min-width:0`, grids fluidas, `overflow-wrap:anywhere`, límites de ancho y, en el historial, tarjetas apilables en lugar de tablas anchas. **Prueba:** revisión a 400, 900 y 1200 px."
+    }
+   ]
+  },
+  {
+   "id": "tp1-p2",
+   "etapa": "TP1",
+   "numero": 2,
+   "fecha": "Implementación",
+   "titulo": "Historial de Git demasiado ancho",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "git"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "**Problema:** una tabla con muchas columnas podía convertirse en un cuadro con scroll horizontal. **Solución:** el historial se representa como tarjetas de commits, donde cada registro muestra fecha, responsable, tipo, título/descripción y enlace. **Resultado:** el historial puede leerse en móvil sin desplazamiento horizontal."
+    }
+   ]
+  },
+  {
+   "id": "tp1-p3",
+   "etapa": "TP1",
+   "numero": 3,
+   "fecha": "Implementación",
+   "titulo": "Imágenes sobredimensionadas",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "rendimiento",
+    "diseño",
+    "multimedia"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "**Problema:** descargar siempre los originales aumentaba el peso. **Solución:** WebP, 400 px, `srcset` y `sizes`. **Prueba:** revisión visual y de dimensiones según contexto."
+    }
+   ]
+  },
+  {
+   "id": "tp1-p4",
+   "etapa": "TP1",
+   "numero": 4,
+   "fecha": "Implementación",
+   "titulo": "Animación excesiva",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "proceso"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "**Problema:** demasiada transición podía generar ruido o incomodidad. **Solución:** microinteracciones puntuales y `prefers-reduced-motion`. **Prueba:** desactivación de movimiento cuando el sistema lo solicita."
+    }
+   ]
+  },
+  {
+   "id": "tp1-p5",
+   "etapa": "TP1",
+   "numero": 5,
+   "fecha": "Implementación",
+   "titulo": "Multimedia pesada",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "ia",
+    "rendimiento",
+    "multimedia"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "**Problema:** iframes cargados desde el inicio. **Solución:** Spotify bajo demanda. **Prueba:** el reproductor se crea únicamente al solicitarlo."
+    }
+   ]
+  },
+  {
+   "id": "tp1-p6",
+   "etapa": "TP1",
+   "numero": 6,
+   "fecha": "Implementación",
+   "titulo": "Formulario sin recarga",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "ia",
+    "formularios",
+    "rendimiento"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "**Problema:** se necesitaba comunicar estados sin abandonar la página. **Solución:** validación + `fetch` AJAX + ARIA + foco. **Prueba:** campos obligatorios, formato de email, longitud y mensajes."
+    }
+   ]
+  },
+  {
+   "id": "tp2-01",
+   "etapa": "TP2",
+   "numero": 1,
+   "fecha": "25/10",
+   "titulo": "Lectura de la consigna y de la rúbrica",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PLANIFICACIÓN"
+   ],
+   "etiquetas": [
+    "rúbrica",
+    "equipo"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "El TP2 pide continuar el proyecto del TP1 en React y se evalúa con 15 criterios; había que convertirlos en tareas concretas."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se numeró cada requisito, se compararon los niveles Cumple / Propone / Supera y se marcaron las dependencias (sidebar → rutas → perfiles → formularios)."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Convertir la rúbrica en una lista de verificación compartida y apuntar a **Propone** en los 15 criterios y a **Supera** en el criterio 9 (identidad visual)."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Quedó una lista de 15 criterios con responsable tentativo. Aprendizaje: leer la rúbrica antes de diseñar evita retrabajo."
+    }
+   ]
+  },
+  {
+   "id": "tp2-02",
+   "etapa": "TP2",
+   "numero": 2,
+   "fecha": "25–26/10",
+   "titulo": "Elección de tecnologías y versiones",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "react",
+    "node"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Elegir versiones de React, React Router, Vite y Node que fueran compatibles entre sí y recomendadas hoy."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se consultó el registro de npm: React 19.3.1, React Router 8.5.1 (exige Node ≥ 22.22), Vite 8.3.5 (Node 20.19+ o 22.12+) y @vitejs/plugin-react 6.1.2 (requiere Vite 8). Oxlint 1.90.0 para el análisis estático."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Fijar versiones exactas en `package.json`, declarar `engines.node >= 22.22.0` y agregar `.nvmrc`. Se descartó Create React App (discontinuado) y Webpack: Vite 8 arranca más rápido y es la herramienta estándar."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Todo el equipo trabaja con el mismo entorno. Aprendizaje: la compatibilidad se verifica en `engines` y `peerDependencies`, no se supone."
+    }
+   ]
+  },
+  {
+   "id": "tp2-03",
+   "etapa": "TP2",
+   "numero": 3,
+   "fecha": "26/10",
+   "titulo": "Arquitectura de navegación: sidebar + header",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PLANIFICACIÓN",
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "navegación",
+    "accesibilidad"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "La consigna exige una sidebar compartida, navegación completa sin el botón Atrás y una portada con presentación propia."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se comparó una landing de scroll con una aplicación multipágina. Se evaluó además un header y de qué lado ubicar el botón hamburguesa."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Un `RootLayout` con `Sidebar` + `AppHeader` (migas y tema) + `<Outlet />`. Los 5 perfiles tienen acceso directo en la sidebar. El contacto es una página propia. En móvil la sidebar es un panel con Esc, fondo oscuro y foco atrapado."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "La navegación queda en un solo lugar y no se copia en cada página. Aprendizaje: el menú móvil necesita gestionar foco y teclado, no sólo mostrarse y ocultarse."
+    }
+   ]
+  },
+  {
+   "id": "tp2-04",
+   "etapa": "TP2",
+   "numero": 4,
+   "fecha": "26/10",
+   "titulo": "Identidad visual: migrar tokens y tema",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "diseño",
+    "accesibilidad"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Conservar paleta, tipografías y los modos claro/oscuro del TP1 dentro de React."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Las variables CSS del TP1 ya cumplían WCAG 2.1 AA y funcionaban con `data-theme`."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Reutilizar `01-variables.css` sin cambios y mover la lógica del tema a React Context (`ThemeContext`) con la misma clave de `localStorage` (`eximia-theme`), sincronización entre pestañas y script previo en `index.html` contra el parpadeo."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "El tema se comparte con `useTheme()`. Aprendizaje: Context evita pasar el tema por props a todos los componentes."
+    }
+   ]
+  },
+  {
+   "id": "tp2-05",
+   "etapa": "TP2",
+   "numero": 5,
+   "fecha": "27/10",
+   "titulo": "Datos: un único members.json",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "datos",
+    "react"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Cinco perfiles escritos a mano en cinco HTML repetían estructura y código."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Un JSON por integrante exigiría cinco importaciones; con cinco registros un archivo único permite alimentar sidebar, tarjetas, navegación anterior/siguiente y \"resto del equipo\"."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "`src/data/members.json` con datos personales, habilidades, películas, discos (con `embedUrl` de Spotify) y frases de la demo de rol. Una sola página `Profile` recibe los datos por ruta (`/equipo/:slug`)."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Se eliminó la repetición del TP1. Aprendizaje: separar contenido (JSON), estructura (JSX) y estilo (CSS) simplifica agregar o corregir un perfil."
+    }
+   ]
+  },
+  {
+   "id": "tp2-06",
+   "etapa": "TP2",
+   "numero": 6,
+   "fecha": "27/10",
+   "titulo": "Formulario único: FormSubmit por AJAX y validación propia",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "formularios"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "El TP1 tenía un formulario grupal y uno por perfil; la consigna del TP2 pide un único formulario general con identificación del integrante."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se comparó FormSubmit por AJAX, Formspree (50 mensajes al mes) y librerías de validación como Yup o Zod."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Un formulario en `/contacto` con selector de destinatario, preseleccionado con `?para=slug` desde cada perfil. Envío con `fetch` a FormSubmit y validación propia (4 campos), sin dependencias nuevas."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "El parámetro en la URL sobrevive a una recarga y se puede compartir. Aprendizaje: para pocos campos una librería de validación agrega más peso que valor."
+    }
+   ]
+  },
+  {
+   "id": "tp2-07",
+   "etapa": "TP2",
+   "numero": 7,
+   "fecha": "28/10",
+   "titulo": "API pública y catálogo JSON",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "DECISIÓN"
+   ],
+   "etiquetas": [
+    "datos",
+    "api"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Hacía falta una API consultable desde el navegador sin claves y un JSON de 20 o más registros coherente con la propuesta."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Open-Meteo no requiere clave, permite CORS y acepta varias coordenadas en un solo pedido; la temperatura se relaciona con la cadena de frío. Para el JSON se evaluaron proyectos, tecnologías y clientes."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Clima en 6 ciudades con nivel de riesgo para la cadena de frío y botón Actualizar/Reintentar. Catálogo de 24 clientes ficticios (tipo, ciudad, país, año de alta, servicio) con búsqueda y filtros por tipo y país."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Ambas secciones refuerzan la identidad de logística B2B. Aprendizaje: elegir datos del dominio hace que la demostración tenga sentido."
+    }
+   ]
+  },
+  {
+   "id": "tp2-08",
+   "etapa": "TP2",
+   "numero": 8,
+   "fecha": "28/10",
+   "titulo": "Árbol de renderizado y bitácora desplegable",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PLANIFICACIÓN"
+   ],
+   "etiquetas": [
+    "bitácora",
+    "react"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "La documentación del TP1 era estática; el TP2 pide un árbol de componentes que corresponda al código."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se evaluó dibujar una imagen frente a generar la vista desde datos (`tree.json`) que se pueda expandir y contraer."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Árbol expandible con archivo, props y hooks de cada componente. La bitácora migra con filtros por etapa, tipo y etiqueta, búsqueda de texto, registros desplegables y carga progresiva."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "La documentación se vuelve navegable. Aprendizaje: una bitácora larga necesita filtros y carga por tandas para seguir siendo legible."
+    }
+   ]
+  },
+  {
+   "id": "tp2-09",
+   "etapa": "TP2",
+   "numero": 9,
+   "fecha": "29/10",
+   "titulo": "Plan de ramas, commits y Pull Requests",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PLANIFICACIÓN"
+   ],
+   "etiquetas": [
+    "git",
+    "equipo"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema / necesidad",
+     "texto": "Cinco personas debían construir la aplicación en un solo día de implementación sin pisarse."
+    },
+    {
+     "titulo": "Análisis",
+     "texto": "Se analizaron las dependencias entre archivos: base y layout → portada y anchor bar → perfiles → formulario y API → documentación."
+    },
+    {
+     "titulo": "Decisión + justificación",
+     "texto": "Una rama `feat/nombre` por integrante y PR en este orden: Fiorella, Malena, Javier, Axel y Selene. Commits convencionales con título y descripción (qué se agrega, qué se incorpora y por qué importa). El plan está en `docs/PLAN-COMMITS.md`."
+    },
+    {
+     "titulo": "Resultado + aprendizaje",
+     "texto": "Cada PR deja la rama principal funcionando. Aprendizaje: ordenar los merges por dependencias reduce los conflictos."
+    }
+   ]
+  },
+  {
+   "id": "tp2-10",
+   "etapa": "TP2",
+   "numero": 10,
+   "fecha": "30/10",
+   "titulo": "Fiorella Alarcón — estructura base, sidebar, header y tema",
+   "responsable": "Fiorella Alarcón · Product & Frontend",
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "react",
+    "navegación",
+    "accesibilidad"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "Había que crear una base común para que el resto pudiera continuar. Se decidió empezar por configuración, tokens, tema, layout y rutas."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Proyecto Vite con React 19.3 y React Router 8, tokens y recursos del TP1, `ThemeContext`, `RootLayout`, `Sidebar` con NavLink, `AppHeader` con migas, pie compartido, rutas con `lazy` y página 404."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "El foco quedaba en un enlace oculto tras elegir una página del menú móvil. Se separó `onNavigate` de `onClose` y se mueve el foco al `<h1>` en cada cambio de ruta."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se revisó la navegación con Tab, Esc y el panel móvil. Se integra mediante el PR de `feat/fiorella`. Aprendizaje: en una SPA el foco se administra a mano."
+    }
+   ],
+   "pr": {
+    "numero": null,
+    "rama": "feat/fiorella",
+    "titulo": "feat: estructura base React 19.3 + Vite 8, sidebar, header y tema",
+    "descripcion": "Configura el proyecto, migra los tokens, agrega ThemeContext, RootLayout, Sidebar, AppHeader, pie, rutas con carga diferida y página 404.",
+    "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+   }
+  },
+  {
+   "id": "tp2-11",
+   "etapa": "TP2",
+   "numero": 11,
+   "fecha": "30/10",
+   "titulo": "Malena Jasque — portada, equipo y catálogo",
+   "responsable": "Malena Jasque · UX/UI & QA",
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "responsive",
+    "diseño",
+    "datos"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "La portada debía conservar el hero del TP1, sumar una demo mejorada y presentar al equipo con tarjetas sin agrandarlas."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Estilos de portada y responsive, `RouteDemo` (zona, entregas y comparación de rutas en SVG), `AnchorBar` con ScrollSpy, `Home`, `Team`, `TeamCard`, y el catálogo con búsqueda, filtros y estado vacío."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Con la sidebar el contenido es más angosto que la ventana y las grillas del TP1 quedaban apretadas. Se ajustaron los breakpoints y se limitó el ancho de las tarjetas a su tamaño original."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se probó el comportamiento en 400, 900 y 1200 px. Se integra mediante el PR de `feat/malena`. Aprendizaje: las medidas responsive dependen del ancho del contenedor, no sólo del de la ventana."
+    }
+   ],
+   "pr": {
+    "numero": null,
+    "rama": "feat/malena",
+    "titulo": "feat: portada, equipo y catálogo con búsqueda y filtros",
+    "descripcion": "Agrega portada con demo interactiva, anchor bar con ScrollSpy, tarjetas del equipo y catálogo JSON con búsqueda y filtros.",
+    "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+   }
+  },
+  {
+   "id": "tp2-12",
+   "etapa": "TP2",
+   "numero": 12,
+   "fecha": "30/10",
+   "titulo": "Javier Churquina — perfiles reutilizables y Spotify",
+   "responsable": "Javier Churquina · Data & Routing",
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "multimedia",
+    "react",
+    "accesibilidad"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "Los cinco perfiles debían salir de una sola página con los datos de `members.json` y conservar el orden del TP1."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Página `Profile`, `SkillCard`, `MovieCard` clickeable, `AlbumCard` con efecto de vinilo y Spotify bajo demanda, `RoleDemo`, navegación anterior/inicio/siguiente y tarjetas del resto del equipo."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Al pasar de un perfil a otro React reutilizaba el componente y un reproductor abierto podía quedar activo. Se agregó `key` por integrante; además el iframe vive dentro de `AlbumCard`, por lo que se desmonta al cambiar de página y deja de sonar."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se probó reproducir un disco y navegar a otra página. Se integra mediante el PR de `feat/javier`. Aprendizaje: desmontar un componente es la forma más simple de liberar recursos."
+    }
+   ],
+   "pr": {
+    "numero": null,
+    "rama": "feat/javier",
+    "titulo": "feat: perfiles reutilizables con Spotify bajo demanda",
+    "descripcion": "Incorpora la página de perfil reutilizable, componentes de habilidades, películas y discos, efecto de vinilo y reproducción de Spotify bajo demanda.",
+    "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+   }
+  },
+  {
+   "id": "tp2-13",
+   "etapa": "TP2",
+   "numero": 13,
+   "fecha": "30/10",
+   "titulo": "Axel Alva — formulario único y API pública",
+   "responsable": "Axel Alva · Backend Developer",
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "formularios",
+    "api"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "El formulario debía ser uno solo, identificar a la persona destinataria y comunicar estados sin recargar. La API debía mostrar carga, error y reintento."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "`ContactForm` con validación accesible y envío AJAX, página `Contact` con `?para=slug`, hook `useOpenMeteo` y página de API con Actualizar/Reintentar."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Si un campo se define como componente dentro del formulario, se recrea en cada tecla y pierde el foco. Se resolvió renderizando los campos como función. En la API, `AbortController` evita que una respuesta vieja pise a una nueva."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se probaron campos vacíos, email inválido, error de red y reintento. Se integra mediante el PR de `feat/axel`. Aprendizaje: un componente no debe declararse dentro de otro."
+    }
+   ],
+   "pr": {
+    "numero": null,
+    "rama": "feat/axel",
+    "titulo": "feat: formulario único y consumo de Open-Meteo",
+    "descripcion": "Agrega formulario de contacto con validación y envío AJAX, identificación por URL y página de API pública con estados de carga, error y reintento.",
+    "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+   }
+  },
+  {
+   "id": "tp2-14",
+   "etapa": "TP2",
+   "numero": 14,
+   "fecha": "30/10",
+   "titulo": "Selene Pais — bitácora, árbol, README y despliegue",
+   "responsable": "Selene Pais · DevOps & Docs",
+   "tipos": [
+    "DESARROLLO"
+   ],
+   "etiquetas": [
+    "bitácora",
+    "git",
+    "documentación"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → análisis → decisión",
+     "texto": "El proceso debía documentarse dentro de la aplicación y el repositorio debía quedar listo para evaluar y desplegar."
+    },
+    {
+     "titulo": "Implementación",
+     "texto": "Árbol de renderizado expandible, bitácora con filtros y registros desplegables, README con tablas de integrantes e IA, plan de commits, `vercel.json` y despliegue en Vercel."
+    },
+    {
+     "titulo": "Dificultad → solución",
+     "texto": "Una bitácora larga cargaba todo junto. Se agregó carga progresiva (\"Mostrar más\") y los commits permanecen ocultos hasta elegir un filtro. Los commits del TP2 se muestran como plan hasta que se actualicen desde GitHub."
+    },
+    {
+     "titulo": "Prueba → integración → aprendizaje",
+     "texto": "Se abrieron el repositorio y el sitio sin iniciar sesión y se revisaron todas las rutas, incluida la recarga directa. Se integra mediante el PR de `feat/selene`. Aprendizaje: documentar obliga a justificar decisiones."
+    }
+   ],
+   "pr": {
+    "numero": null,
+    "rama": "feat/selene",
+    "titulo": "docs: bitácora, árbol de renderizado, README y despliegue",
+    "descripcion": "Incorpora la bitácora con filtros, el árbol de renderizado expandible, el README, el plan de commits y la configuración de Vercel.",
+    "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+   }
+  },
+  {
+   "id": "tp2-p1",
+   "etapa": "TP2",
+   "numero": 1,
+   "fecha": "30/10",
+   "titulo": "Foco perdido al cambiar de página",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "navegación"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "Problema: en una SPA no hay recarga y el foco quedaba en un enlace que ya no existía. Solución: al cambiar de ruta el foco pasa al `<h1>` (con `tabIndex=-1`). Prueba: recorrido con Tab y lector de pantalla."
+    }
+   ]
+  },
+  {
+   "id": "tp2-p2",
+   "etapa": "TP2",
+   "numero": 2,
+   "fecha": "30/10",
+   "titulo": "El Spotify seguía sonando al navegar",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "multimedia"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "Problema: un reproductor abierto podía continuar activo. Solución: el iframe se crea dentro de `AlbumCard`, se desmonta al salir de la ruta y se reinicia con `key` al pasar entre perfiles. Prueba: reproducir y cambiar de página."
+    }
+   ]
+  },
+  {
+   "id": "tp2-p3",
+   "etapa": "TP2",
+   "numero": 3,
+   "fecha": "30/10",
+   "titulo": "Desborde con la sidebar",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "responsive"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "Problema: las grillas del TP1 calculaban su ancho con la ventana, pero la sidebar resta espacio. Solución: breakpoints ajustados, `min-width: 0` y tarjetas con ancho máximo. Prueba: revisión en 400, 900 y 1200 px."
+    }
+   ]
+  },
+  {
+   "id": "tp2-p4",
+   "etapa": "TP2",
+   "numero": 4,
+   "fecha": "30/10",
+   "titulo": "Rutas internas con 404 al recargar",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "navegación",
+    "despliegue"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "Problema: abrir `/equipo/axel` directamente en el hosting devolvía 404 porque no existe ese archivo. Solución: `vercel.json` con un rewrite hacia `index.html`. Prueba: abrir y recargar cada URL."
+    }
+   ]
+  },
+  {
+   "id": "tp2-p5",
+   "etapa": "TP2",
+   "numero": 5,
+   "fecha": "30/10",
+   "titulo": "Campos que perdían el foco al escribir",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PROBLEMA"
+   ],
+   "etiquetas": [
+    "formularios",
+    "react"
+   ],
+   "bloques": [
+    {
+     "titulo": "Problema → solución → prueba",
+     "texto": "Problema: un componente `Field` declarado dentro del formulario se recreaba en cada render. Solución: se renderiza como función. Prueba: escribir varias letras seguidas en cada campo."
+    }
+   ]
+  },
+  {
+   "id": "tp2-15",
+   "etapa": "TP2",
+   "numero": 15,
+   "fecha": "30/10",
+   "titulo": "Prueba integral antes de entregar",
+   "responsable": "Equipo Eximia Code",
+   "tipos": [
+    "PRUEBA"
+   ],
+   "etiquetas": [
+    "accesibilidad",
+    "responsive",
+    "navegación"
+   ],
+   "bloques": [
+    {
+     "titulo": "Qué se revisó",
+     "texto": "Los 15 criterios de la rúbrica, todas las rutas, la búsqueda, los filtros, la API y los formularios."
+    },
+    {
+     "titulo": "Cómo",
+     "texto": "Recorrido con teclado, tres anchos de pantalla (400, 900 y 1200 px), tema claro y oscuro, recarga directa de cada URL y apertura del repositorio y del sitio sin iniciar sesión."
+    },
+    {
+     "titulo": "Resultado",
+     "texto": "Los resultados se registran en la lista de verificación de esta página."
+    }
+   ]
+  }
+ ],
+ "commits": [
+  {
+   "etapa": "TP1",
+   "sha": "dcf842a",
+   "fecha": "01/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Función",
+   "titulo": "feat: incorpora interacción dinámica de portada",
+   "descripcion": "agrega la demo de optimización de rutas y estados dinámicos de la portada.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/dcf842a",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "6f1ce4b",
+   "fecha": "01/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Función",
+   "titulo": "feat: incorpora perfil de Fiorella y recursos optimizados",
+   "descripcion": "incorpora navegación interna, imágenes WebP, srcset/sizes y estructura completa del perfil.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/6f1ce4b",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "3bf1e72",
+   "fecha": "02/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Estilos",
+   "titulo": "style: incorpora preferencias de accesibilidad visual",
+   "descripcion": "agrega reduced motion, contraste, forced colors, foco visible e impresión.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/3bf1e72",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "f353f4b",
+   "fecha": "02/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Estilos",
+   "titulo": "style: adapta responsive a 1200, 900 y 400 px",
+   "descripcion": "reorganiza grillas, navegación, formularios, tarjetas y espacios para los breakpoints definidos.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/f353f4b",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "43bcae1",
+   "fecha": "03/10/2026",
+   "persona": "Javier Churquina",
+   "tipo": "Función",
+   "titulo": "feat: incorpora perfil de Javier y recursos optimizados",
+   "descripcion": "incorpora perfil semántico, interacción de Data & Routing y recursos multimedia optimizados.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/43bcae1",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "8c15964",
+   "fecha": "03/10/2026",
+   "persona": "Javier Churquina",
+   "tipo": "Función",
+   "titulo": "feat: integra Spotify bajo demanda",
+   "descripcion": "crea el iframe sólo cuando se solicita y evita múltiples reproductores cargados de inicio.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/8c15964",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "acc33a4",
+   "fecha": "04/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Función",
+   "titulo": "feat: incorpora perfil de Axel e interacción de Backend",
+   "descripcion": "incorpora el perfil, interacción dinámica y recursos optimizados.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/acc33a4",
+   "rama": ""
+  },
+  {
+   "etapa": "TP1",
+   "sha": "02491c",
+   "fecha": "04/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Función",
+   "titulo": "feat: incorpora validación y envío accesible de formularios",
+   "descripcion": "agrega validaciones, AJAX FormSubmit, mensajes dinámicos, ARIA, foco y estado del botón.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/commit/02491c",
+   "rama": ""
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Estructura",
+   "titulo": "chore: inicializa proyecto con React 19.3, React Router 8 y Vite 8",
+   "descripcion": "Se agrega: la configuración del proyecto y las versiones exactas. Se incorpora: scripts dev/build/preview/lint, engines de Node, rewrite SPA de Vercel y Oxlint. Importante: todo el equipo trabaja con el mismo entorno y Vercel resuelve las rutas internas al recargar.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/fiorella",
+   "rama": "feat/fiorella"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Estilos",
+   "titulo": "style: migra tokens de diseño, tipografías y recursos del TP1",
+   "descripcion": "Se agrega: la identidad visual del TP1. Se incorpora: variables CSS claro/oscuro, Orbitron, Space Grotesk, IBM Plex Sans, imágenes WebP y reglas de accesibilidad. Importante: mantiene la paleta y el contraste WCAG AA con que se evaluó el TP1.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/fiorella",
+   "rama": "feat/fiorella"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Función",
+   "titulo": "feat: incorpora tema claro/oscuro con React Context",
+   "descripcion": "Se agrega: el selector de tema y los íconos SVG. Se incorpora: Context con localStorage, preferencia del sistema y sincronización entre pestañas. Importante: conserva la elección de la persona sin parpadeo.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/fiorella",
+   "rama": "feat/fiorella"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Función",
+   "titulo": "feat: crea layout compartido con sidebar, header y pie",
+   "descripcion": "Se agrega: la estructura que no cambia entre páginas. Se incorpora: NavLink con página activa, migas, menú móvil con Esc y foco atrapado, y los datos de los 5 integrantes. Importante: cumple los criterios de sidebar compartida y navegación completa.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/fiorella",
+   "rama": "feat/fiorella"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Fiorella Alarcón",
+   "tipo": "Función",
+   "titulo": "feat: configura rutas con carga diferida y página 404",
+   "descripcion": "Se agrega: el punto de entrada y la tabla de rutas. Se incorpora: createBrowserRouter, route.lazy, HydrateFallback y ruta comodín. Importante: cada página se descarga sólo cuando se visita y una URL inexistente tiene salida.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/fiorella",
+   "rama": "feat/fiorella"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Estilos",
+   "titulo": "style: incorpora estilos de portada y responsive 1200/900/400",
+   "descripcion": "Se agrega: los estilos de portada, tarjetas y breakpoints. Se incorpora: hero, grilla del equipo con tarjetas de ancho original y media queries 1200, 900 y 400. Importante: evita el desborde horizontal con la sidebar fija.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/malena",
+   "rama": "feat/malena"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Función",
+   "titulo": "feat: agrega anchor bar sticky con ScrollSpy",
+   "descripcion": "Se agrega: la navegación interna de cada página. Se incorpora: listener de scroll con requestAnimationFrame y aria-current en la sección activa. Importante: la persona sabe en qué parte está sin depender del color.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/malena",
+   "rama": "feat/malena"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Función",
+   "titulo": "feat: agrega demo interactiva Optimizar ruta",
+   "descripcion": "Se agrega: la demo mejorada de la portada. Se incorpora: selección de zona y entregas, cálculo determinista y mapa SVG antes/después. Importante: explica la propuesta de logística de forma interactiva.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/malena",
+   "rama": "feat/malena"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Función",
+   "titulo": "feat: construye portada y página del equipo con tarjetas clickeables",
+   "descripcion": "Se agrega: las pantallas de presentación. Se incorpora: hero con panel.webp, CTA, tarjetas de un solo enlace y perfiles de GitHub. Importante: cumple el criterio de portada con presentación propia.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/malena",
+   "rama": "feat/malena"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Malena Jasque",
+   "tipo": "Función",
+   "titulo": "feat: agrega catálogo JSON con búsqueda y filtros",
+   "descripcion": "Se agrega: 24 clientes ficticios en una lista dinámica. Se incorpora: búsqueda sin tildes, filtros por tipo y país, detalle desplegable, estado vacío y restablecer. Importante: cumple los criterios de datos locales y búsqueda/filtro en nivel Propone.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/malena",
+   "rama": "feat/malena"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Javier Churquina",
+   "tipo": "Estilos",
+   "titulo": "style: migra estilos de perfil y efecto vinilo",
+   "descripcion": "Se agrega: los estilos de perfil, películas y discos. Se incorpora: foto a la izquierda, tarjetas 2:3 y 1:1 y vinilo animado con prefers-reduced-motion. Importante: mantiene las proporciones del TP1.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/javier",
+   "rama": "feat/javier"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Javier Churquina",
+   "tipo": "Función",
+   "titulo": "feat: crea componentes de habilidades, películas y demo de rol",
+   "descripcion": "Se agrega: las piezas reutilizables del perfil. Se incorpora: SkillCard con Figma/Kafka/GitHub, MovieCard clickeable y RoleDemo con frases por props. Importante: un mismo componente sirve para cinco personas.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/javier",
+   "rama": "feat/javier"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Javier Churquina",
+   "tipo": "Función",
+   "titulo": "feat: integra Spotify bajo demanda desde members.json",
+   "descripcion": "Se agrega: la reproducción dentro del cuadrado del disco. Se incorpora: iframe creado al hacer clic con la URL de members.json y botón para cerrarlo. Importante: carga liviana y la música se detiene al cambiar de página.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/javier",
+   "rama": "feat/javier"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Javier Churquina",
+   "tipo": "Función",
+   "titulo": "feat: construye perfil reutilizable con navegación entre integrantes",
+   "descripcion": "Se agrega: la página /equipo/:slug. Se incorpora: orden del TP1, anterior/inicio/siguiente circular y cuatro tarjetas del resto del equipo. Importante: cumple el criterio de perfiles dentro de React con interacción.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/javier",
+   "rama": "feat/javier"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Estilos",
+   "titulo": "style: migra estilos de formularios",
+   "descripcion": "Se agrega: los estilos de campos, errores y estados. Se incorpora: mensajes de éxito/error y foco visible. Importante: los errores se distinguen por texto además del color.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/axel",
+   "rama": "feat/axel"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Función",
+   "titulo": "feat: crea formulario de contacto con validación y envío AJAX",
+   "descripcion": "Se agrega: el formulario único. Se incorpora: validación accesible, fetch a FormSubmit y selector de destinatario. Importante: se envía sin recargar y comunica cada estado.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/axel",
+   "rama": "feat/axel"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Función",
+   "titulo": "feat: agrega página de contacto con identificación por URL",
+   "descripcion": "Se agrega: la pantalla /contacto. Se incorpora: lectura de ?para=slug con useSearchParams. Importante: un mensaje desde un perfil queda identificado y la URL sobrevive a una recarga.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/axel",
+   "rama": "feat/axel"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Función",
+   "titulo": "feat: crea hook useOpenMeteo con estados de carga y error",
+   "descripcion": "Se agrega: la lógica de consulta a la API. Se incorpora: fetch, AbortController, tiempo máximo y refresh. Importante: evita respuestas viejas y errores silenciosos.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/axel",
+   "rama": "feat/axel"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Axel Alva",
+   "tipo": "Función",
+   "titulo": "feat: agrega página de API pública con actualización y reintento",
+   "descripcion": "Se agrega: el clima de 6 ciudades. Se incorpora: mensaje de carga, mensaje de error, botón Reintentar y riesgo de cadena de frío. Importante: cumple el criterio de API con estados en nivel Propone.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/axel",
+   "rama": "feat/axel"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Selene Pais",
+   "tipo": "Estilos",
+   "titulo": "style: migra estilos de bitácora y árbol de renderizado",
+   "descripcion": "Se agrega: el formato documental del TP1. Se incorpora: tarjetas, línea de tiempo, filtros y árbol. Importante: conserva la jerarquía que se destacó en el TP1.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/selene",
+   "rama": "feat/selene"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Selene Pais",
+   "tipo": "Función",
+   "titulo": "feat: agrega árbol de renderizado expandible",
+   "descripcion": "Se agrega: el árbol de componentes del código real. Se incorpora: nodos con archivo, props y hooks; expandir y contraer todo. Importante: cumple el criterio de árbol en nivel Propone.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/selene",
+   "rama": "feat/selene"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Selene Pais",
+   "tipo": "Función",
+   "titulo": "feat: incorpora datos de la bitácora del TP1 y del TP2",
+   "descripcion": "Se agrega: los registros del proceso. Se incorpora: etapas, problemas, commits, Pull Requests y pruebas de ambos trabajos. Importante: mantiene la trazabilidad del TP1 y suma la del TP2.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/selene",
+   "rama": "feat/selene"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Selene Pais",
+   "tipo": "Función",
+   "titulo": "feat: crea bitácora con filtros, desplegables y commits por etapa",
+   "descripcion": "Se agrega: la página de bitácora. Se incorpora: búsqueda, filtros por etapa/tipo/etiqueta, registros desplegables, carga progresiva y commits bajo demanda. Importante: cumple el criterio de bitácora con desplegables y filtros.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/selene",
+   "rama": "feat/selene"
+  },
+  {
+   "etapa": "TP2",
+   "sha": null,
+   "fecha": "30/10/2026",
+   "persona": "Selene Pais",
+   "tipo": "Documentación",
+   "titulo": "docs: documenta README, uso de IA y plan de trabajo",
+   "descripcion": "Se agrega: la documentación de entrega. Se incorpora: README con índice, capturas, responsabilidades y uso de IA por integrante; plan de commits y prompts. Importante: cubre los criterios 1, 2, 3 y 15 en nivel Propone.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/selene",
+   "rama": "feat/selene"
+  }
+ ],
+ "prs": [
+  {
+   "etapa": "TP1",
+   "numero": 1,
+   "titulo": "feat: incorpora estructura base, portada y perfil de Fiorella",
+   "responsable": "Fiorella Alarcón",
+   "descripcion": "base del proyecto, portada, navegación, accesibilidad, optimización, interacción y primer perfil.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/1"
+  },
+  {
+   "etapa": "TP1",
+   "numero": 2,
+   "titulo": "feat: mejora UX/UI, responsive y agrega perfil de Malena",
+   "responsable": "Malena Jasque",
+   "descripcion": "mejoras de UX/UI, responsive, accesibilidad y perfil de Malena.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/2"
+  },
+  {
+   "etapa": "TP1",
+   "numero": 3,
+   "titulo": "feat: incorpora integración de Spotify y perfil de Javier",
+   "responsable": "Javier Churquina",
+   "descripcion": "perfil, Data & Routing, multimedia y Spotify bajo demanda.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/3"
+  },
+  {
+   "etapa": "TP1",
+   "numero": 4,
+   "titulo": "feat: incorpora formularios accesibles y perfil de Axel",
+   "responsable": "Axel Alva",
+   "descripcion": "perfil Backend, validación, AJAX, ARIA, estados y gestión del foco.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/4"
+  },
+  {
+   "etapa": "TP1",
+   "numero": 5,
+   "titulo": "docs: incorpora bitácora, documentación y perfil de Selene",
+   "responsable": "Selene Pais",
+   "descripcion": "perfil de Selene, Bitácora, documentación, evidencias y cierre del proceso.",
+   "url": "https://github.com/fiorellaalarcon/tp1-grupo12/pull/5"
+  },
+  {
+   "etapa": "TP2",
+   "numero": null,
+   "titulo": "feat: estructura base React 19.3 + Vite 8, sidebar, header y tema",
+   "responsable": "Fiorella Alarcón",
+   "descripcion": "Rama feat/fiorella. Configura el proyecto, migra los tokens, agrega ThemeContext, RootLayout, Sidebar, AppHeader, pie, rutas con carga diferida y página 404.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+  },
+  {
+   "etapa": "TP2",
+   "numero": null,
+   "titulo": "feat: portada, equipo y catálogo con búsqueda y filtros",
+   "responsable": "Malena Jasque",
+   "descripcion": "Rama feat/malena. Agrega portada con demo interactiva, anchor bar con ScrollSpy, tarjetas del equipo y catálogo JSON con búsqueda y filtros.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+  },
+  {
+   "etapa": "TP2",
+   "numero": null,
+   "titulo": "feat: perfiles reutilizables con Spotify bajo demanda",
+   "responsable": "Javier Churquina",
+   "descripcion": "Rama feat/javier. Incorpora la página de perfil reutilizable, componentes de habilidades, películas y discos, efecto de vinilo y reproducción de Spotify bajo demanda.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+  },
+  {
+   "etapa": "TP2",
+   "numero": null,
+   "titulo": "feat: formulario único y consumo de Open-Meteo",
+   "responsable": "Axel Alva",
+   "descripcion": "Rama feat/axel. Agrega formulario de contacto con validación y envío AJAX, identificación por URL y página de API pública con estados de carga, error y reintento.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+  },
+  {
+   "etapa": "TP2",
+   "numero": null,
+   "titulo": "docs: bitácora, árbol de renderizado, README y despliegue",
+   "responsable": "Selene Pais",
+   "descripcion": "Rama feat/selene. Incorpora la bitácora con filtros, el árbol de renderizado expandible, el README, el plan de commits y el despliegue en Vercel.",
+   "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pulls"
+  }
+ ],
+ "pruebas": {
+  "TP1": [
+   {
+    "texto": "HTML5 semántico y navegación interna",
+    "hecho": true
+   },
+   {
+    "texto": "Responsive en 400 / 900 / 1200 px",
+    "hecho": true
+   },
+   {
+    "texto": "Sin desplazamiento horizontal intencional",
+    "hecho": true
+   },
+   {
+    "texto": "Historial de commits sin cuadro horizontal en Bitácora",
+    "hecho": true
+   },
+   {
+    "texto": "JavaScript en portada y perfiles",
+    "hecho": true
+   },
+   {
+    "texto": "ALT, ARIA y foco visible",
+    "hecho": true
+   },
+   {
+    "texto": "Skip-link y recorrido con Tab",
+    "hecho": true
+   },
+   {
+    "texto": "Tema claro/oscuro",
+    "hecho": true
+   },
+   {
+    "texto": "prefers-reduced-motion",
+    "hecho": true
+   },
+   {
+    "texto": "prefers-contrast / forced-colors",
+    "hecho": true
+   },
+   {
+    "texto": "Imágenes WebP optimizadas",
+    "hecho": true
+   },
+   {
+    "texto": "Formularios con validación y estados",
+    "hecho": true
+   },
+   {
+    "texto": "Spotify bajo demanda",
+    "hecho": true
+   },
+   {
+    "texto": "Bitácora accesible desde el menú",
+    "hecho": true
+   }
+  ],
+  "TP2": [
+   {
+    "texto": "Compilación de producción con Vite (`npm run build`) sin errores",
+    "hecho": true
+   },
+   {
+    "texto": "Análisis estático con Oxlint (`npm run lint`) sin errores",
+    "hecho": true
+   },
+   {
+    "texto": "Las 11 rutas (inicio, equipo, 5 perfiles, recursos, API, árbol, bitácora y contacto) se renderizan sin errores",
+    "hecho": true
+   },
+   {
+    "texto": "JSON local con 24 registros y 5 perfiles con 4 habilidades, 3 películas y 3 discos cada uno",
+    "hecho": true
+   },
+   {
+    "texto": "Recorrido completo con teclado (Tab, Enter y Esc) y lector de pantalla",
+    "hecho": false
+   },
+   {
+    "texto": "Responsive en 400 / 900 / 1200 px sin desplazamiento horizontal",
+    "hecho": false
+   },
+   {
+    "texto": "Tema claro y oscuro con persistencia y preferencia del sistema",
+    "hecho": false
+   },
+   {
+    "texto": "prefers-reduced-motion, prefers-contrast y forced-colors",
+    "hecho": false
+   },
+   {
+    "texto": "Spotify se detiene al cambiar de página",
+    "hecho": false
+   },
+   {
+    "texto": "Formulario: errores, envío correcto y envío con error",
+    "hecho": false
+   },
+   {
+    "texto": "API: carga, error (modo avión) y reintento",
+    "hecho": false
+   },
+   {
+    "texto": "Recarga directa de cada URL en Vercel sin errores",
+    "hecho": false
+   },
+   {
+    "texto": "Repositorio y sitio abiertos sin iniciar sesión; invitaciones aceptadas",
+    "hecho": false
+   }
+  ]
+ },
+ "aprendizajes": {
+  "TP1": [
+   "Eximia Code permitió transformar una problemática previamente analizada en una experiencia frontend completa. El trabajo mostró que desarrollar una interfaz implica investigar, tomar decisiones, implementar, encontrar dificultades, resolverlas, probarlas e integrarlas.",
+   "La organización por ramas, commits y Pull Requests permitió distribuir responsabilidades y conservar trazabilidad. La Bitácora complementa ese historial explicando el motivo de las decisiones y el aprendizaje obtenido."
+  ],
+  "TP2": [
+   "Migrar a React no fue copiar el HTML: fue separar datos, estructura y estilo para que un mismo componente sirva a cinco perfiles.",
+   "En una aplicación de una sola página el navegador ya no gestiona el foco ni la recarga: el equipo debe hacerlo (foco en el título, Esc y fondo inerte en el menú móvil, rewrite en el hosting).",
+   "El orden de los Pull Requests importa: ordenarlos por dependencias evitó conflictos y dejó la rama principal funcionando en cada integración."
+  ]
+ },
+ "proximos": [
+  {
+   "titulo": "Pruebas automáticas",
+   "texto": "Agregar Vitest y Testing Library para comprobar búsqueda, filtros y formulario."
+  },
+  {
+   "titulo": "TypeScript",
+   "texto": "Tipar los datos de `members.json` y `catalogo.json` para detectar errores antes de ejecutar."
+  },
+  {
+   "titulo": "Backend real",
+   "texto": "Reemplazar el catálogo local por una API propia con base de datos, conectando con las materias de Backend."
+  },
+  {
+   "titulo": "Internacionalización",
+   "texto": "Ofrecer el sitio en español e inglés manteniendo los mismos componentes."
+  }
+ ]
+}
