@@ -1,0 +1,664 @@
+{
+ "name": "App",
+ "file": "src/App.jsx",
+ "descripcion": "Componente raíz: tema + router + tabla de rutas.",
+ "children": [
+  {
+   "name": "ThemeProvider",
+   "file": "src/context/ThemeContext.jsx",
+   "descripcion": "Context del tema claro/oscuro con localStorage.",
+   "props": [
+    "children"
+   ],
+   "hooks": [
+    "useState",
+    "useEffect",
+    "useMemo",
+    "useCallback",
+    "useMediaQuery"
+   ]
+  },
+  {
+   "name": "RouterProvider",
+   "file": "react-router",
+   "descripcion": "Provee el router de datos (createBrowserRouter).",
+   "children": [
+    {
+     "name": "RootLayout",
+     "file": "src/layouts/RootLayout.jsx",
+     "descripcion": "Layout compartido: sidebar, header, pie y menú móvil accesible.",
+     "hooks": [
+      "useState",
+      "useRef",
+      "useEffect",
+      "useCallback",
+      "useLocation",
+      "useMediaQuery"
+     ],
+     "children": [
+      {
+       "name": "Sidebar",
+       "file": "src/components/Sidebar.jsx",
+       "descripcion": "Barra lateral con identidad, enlaces, perfiles y página activa.",
+       "props": [
+        "isOpen",
+        "onClose",
+        "onNavigate"
+       ],
+       "children": [
+        {
+         "name": "NavLink",
+         "file": "react-router",
+         "descripcion": "Enlaces con aria-current y clase active."
+        },
+        {
+         "name": "Icon",
+         "file": "src/components/Icon.jsx",
+         "descripcion": "Íconos SVG decorativos.",
+         "props": [
+          "name",
+          "size"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "AppHeader",
+       "file": "src/components/AppHeader.jsx",
+       "descripcion": "Migas de pan, hamburguesa y tema.",
+       "props": [
+        "menuOpen",
+        "onMenuToggle",
+        "buttonRef"
+       ],
+       "hooks": [
+        "useLocation"
+       ],
+       "children": [
+        {
+         "name": "Icon",
+         "file": "src/components/Icon.jsx",
+         "descripcion": "Íconos SVG decorativos.",
+         "props": [
+          "name",
+          "size"
+         ]
+        },
+        {
+         "name": "ThemeToggle",
+         "file": "src/components/ThemeToggle.jsx",
+         "descripcion": "Botón claro/oscuro.",
+         "hooks": [
+          "useTheme"
+         ],
+         "children": [
+          {
+           "name": "Icon",
+           "file": "src/components/Icon.jsx",
+           "descripcion": "Íconos SVG decorativos.",
+           "props": [
+            "name",
+            "size"
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Outlet",
+       "file": "react-router",
+       "descripcion": "Punto donde se dibuja la página de la ruta actual.",
+       "children": [
+        {
+         "name": "Home",
+         "file": "src/pages/Home.jsx",
+         "descripcion": "Portada: hero, demo, equipo y CTA.",
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "RouteDemo",
+           "file": "src/components/RouteDemo.jsx",
+           "descripcion": "Demo interactiva Optimizar ruta.",
+           "hooks": [
+            "useState",
+            "useId",
+            "useMemo",
+            "useEffect",
+            "useRef",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "TeamCard",
+           "file": "src/components/TeamCard.jsx",
+           "descripcion": "Tarjeta clickeable de integrante.",
+           "props": [
+            "member"
+           ],
+           "children": [
+            {
+             "name": "Link",
+             "file": "react-router",
+             "descripcion": "Enlace del router al perfil."
+            }
+           ]
+          },
+          {
+           "name": "GithubList",
+           "file": "src/components/GithubList.jsx",
+           "descripcion": "Enlaces externos a GitHub (.map de members.json)."
+          }
+         ]
+        },
+        {
+         "name": "Team",
+         "file": "src/pages/Team.jsx",
+         "descripcion": "Presentación del equipo y responsabilidades.",
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "TeamCard",
+           "file": "src/components/TeamCard.jsx",
+           "descripcion": "Tarjeta clickeable de integrante.",
+           "props": [
+            "member"
+           ],
+           "children": [
+            {
+             "name": "Link",
+             "file": "react-router",
+             "descripcion": "Enlace del router al perfil."
+            }
+           ]
+          },
+          {
+           "name": "GithubList",
+           "file": "src/components/GithubList.jsx",
+           "descripcion": "Enlaces externos a GitHub (.map de members.json)."
+          }
+         ]
+        },
+        {
+         "name": "Profile",
+         "file": "src/pages/Profile.jsx",
+         "descripcion": "Perfil reutilizable /equipo/:slug.",
+         "hooks": [
+          "useParams"
+         ],
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "RoleDemo",
+           "file": "src/components/RoleDemo.jsx",
+           "descripcion": "Interacción propia del rol.",
+           "props": [
+            "titulo",
+            "boton",
+            "frases"
+           ],
+           "hooks": [
+            "useState"
+           ]
+          },
+          {
+           "name": "SkillCard",
+           "file": "src/components/SkillCard.jsx",
+           "descripcion": "Habilidad con ícono.",
+           "props": [
+            "skill"
+           ]
+          },
+          {
+           "name": "MovieCard",
+           "file": "src/components/MovieCard.jsx",
+           "descripcion": "Póster clickeable (IMDb).",
+           "props": [
+            "movie"
+           ]
+          },
+          {
+           "name": "AlbumCard",
+           "file": "src/components/AlbumCard.jsx",
+           "descripcion": "Disco con vinilo y Spotify bajo demanda.",
+           "props": [
+            "album"
+           ],
+           "hooks": [
+            "useState"
+           ],
+           "children": [
+            {
+             "name": "Icon",
+             "file": "src/components/Icon.jsx",
+             "descripcion": "Íconos SVG decorativos.",
+             "props": [
+              "name",
+              "size"
+             ]
+            }
+           ]
+          },
+          {
+           "name": "ProfileNav",
+           "file": "src/components/ProfileNav.jsx",
+           "descripcion": "Anterior / inicio / siguiente.",
+           "props": [
+            "index"
+           ]
+          },
+          {
+           "name": "RestCard",
+           "file": "src/components/RestCard.jsx",
+           "descripcion": "Tarjeta del resto del equipo.",
+           "props": [
+            "member"
+           ]
+          },
+          {
+           "name": "NotFound",
+           "file": "src/pages/NotFound.jsx",
+           "descripcion": "Página 404 con salidas internas.",
+           "children": [
+            {
+             "name": "Link",
+             "file": "react-router",
+             "descripcion": "Enlaces de regreso."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Catalog",
+         "file": "src/pages/Catalog.jsx",
+         "descripcion": "Recursos JSON con búsqueda y filtros.",
+         "hooks": [
+          "useState",
+          "useId",
+          "useMemo"
+         ],
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "CatalogCard",
+           "file": "src/components/CatalogCard.jsx",
+           "descripcion": "Cliente desplegable.",
+           "props": [
+            "item"
+           ],
+           "hooks": [
+            "useState",
+            "useId"
+           ],
+           "children": [
+            {
+             "name": "Icon",
+             "file": "src/components/Icon.jsx",
+             "descripcion": "Íconos SVG decorativos.",
+             "props": [
+              "name",
+              "size"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "ApiPage",
+         "file": "src/pages/ApiPage.jsx",
+         "descripcion": "API pública Open-Meteo con carga, error y reintento.",
+         "hooks": [
+          "useOpenMeteo"
+         ],
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          }
+         ]
+        },
+        {
+         "name": "RenderTree",
+         "file": "src/pages/RenderTree.jsx",
+         "descripcion": "Este árbol, expandible.",
+         "hooks": [
+          "useState"
+         ],
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "ComponentTree",
+           "file": "src/components/ComponentTree.jsx",
+           "descripcion": "Nodo recursivo expandible.",
+           "props": [
+            "node",
+            "depth",
+            "forceOpen"
+           ],
+           "hooks": [
+            "useState",
+            "useId"
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Bitacora",
+         "file": "src/pages/Bitacora.jsx",
+         "descripcion": "Bitácora con filtros y desplegables.",
+         "hooks": [
+          "useState",
+          "useMemo",
+          "useId",
+          "useCommits"
+         ],
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "LogEntry",
+           "file": "src/components/LogEntry.jsx",
+           "descripcion": "Registro desplegable.",
+           "props": [
+            "entry",
+            "open",
+            "onToggle"
+           ],
+           "children": [
+            {
+             "name": "Icon",
+             "file": "src/components/Icon.jsx",
+             "descripcion": "Íconos SVG decorativos.",
+             "props": [
+              "name",
+              "size"
+             ]
+            },
+            {
+             "name": "RichText",
+             "file": "src/components/RichText.jsx",
+             "descripcion": "Negrita y código desde texto.",
+             "props": [
+              "text"
+             ]
+            }
+           ]
+          },
+          {
+           "name": "RichText",
+           "file": "src/components/RichText.jsx",
+           "descripcion": "Negrita y código desde texto.",
+           "props": [
+            "text"
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Contact",
+         "file": "src/pages/Contact.jsx",
+         "descripcion": "Contacto con ?para=slug.",
+         "hooks": [
+          "useSearchParams"
+         ],
+         "children": [
+          {
+           "name": "AnchorBar",
+           "file": "src/components/AnchorBar.jsx",
+           "descripcion": "Anchor bar sticky con sección activa.",
+           "props": [
+            "items",
+            "label"
+           ],
+           "hooks": [
+            "useScrollSpy",
+            "useMediaQuery"
+           ]
+          },
+          {
+           "name": "Section",
+           "file": "src/components/Section.jsx",
+           "descripcion": "Sección reutilizable con children.",
+           "props": [
+            "id",
+            "eyebrow",
+            "title",
+            "intro",
+            "alt",
+            "children"
+           ]
+          },
+          {
+           "name": "ContactForm",
+           "file": "src/components/ContactForm.jsx",
+           "descripcion": "Formulario único con validación y AJAX.",
+           "props": [
+            "para",
+            "onParaChange"
+           ],
+           "hooks": [
+            "useState",
+            "useId",
+            "useRef"
+           ]
+          },
+          {
+           "name": "GithubList",
+           "file": "src/components/GithubList.jsx",
+           "descripcion": "Enlaces externos a GitHub (.map de members.json)."
+          }
+         ]
+        },
+        {
+         "name": "NotFound",
+         "file": "src/pages/NotFound.jsx",
+         "descripcion": "Página 404 con salidas internas.",
+         "children": [
+          {
+           "name": "Link",
+           "file": "react-router",
+           "descripcion": "Enlaces de regreso."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Footer",
+       "file": "src/components/Footer.jsx",
+       "descripcion": "Pie compartido.",
+       "hooks": [
+        "useMediaQuery"
+       ],
+       "children": [
+        {
+         "name": "Link",
+         "file": "react-router",
+         "descripcion": "Enlaces del pie."
+        }
+       ]
+      },
+      {
+       "name": "ScrollRestoration",
+       "file": "react-router",
+       "descripcion": "Restaura el scroll al cambiar de ruta."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
