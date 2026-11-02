@@ -12,7 +12,7 @@ import Section from '../components/Section.jsx';
 import TeamCard from '../components/TeamCard.jsx';
 import GithubList from '../components/GithubList.jsx';
 import RandomProfile from '../components/RandomProfile.jsx';
-import Icon from '../components/Icon.jsx';
+import ProjectLinks from '../components/ProjectLinks.jsx';
 
 const ANCHORS = [
   { id: 'inicio', label: 'Presentación' },
@@ -71,12 +71,7 @@ export default function Home() {
       </Section>
 
       <Section id="recorrido" eyebrow="Explorá" title="Recorré el proyecto" intro="Además de conocer al equipo, descubrí cómo está construida la aplicación.">
-        <div className="project-links-grid">
-          <Link className="project-link-card" to="/recursos"><Icon name="database" size={25} /><span><strong>Recursos JSON</strong><small>Explorá el catálogo local, buscá y filtrá sus registros.</small></span><span className="project-link-arrow" aria-hidden="true">↗</span></Link>
-          <Link className="project-link-card" to="/api"><Icon name="cloud" size={25} /><span><strong>API pública</strong><small>Conocé los datos consultados y sus estados de carga.</small></span><span className="project-link-arrow" aria-hidden="true">↗</span></Link>
-          <Link className="project-link-card" to="/arbol"><Icon name="tree" size={25} /><span><strong>Árbol de renderizado</strong><small>Recorré la jerarquía de componentes de React.</small></span><span className="project-link-arrow" aria-hidden="true">↗</span></Link>
-          <Link className="project-link-card" to="/bitacora"><Icon name="book" size={25} /><span><strong>Bitácora</strong><small>Seguí las decisiones, dificultades y avances del equipo.</small></span><span className="project-link-arrow" aria-hidden="true">↗</span></Link>
-        </div>
+        <ProjectLinks />
       </Section>
 
       <Section id="contacto-cta" alt eyebrow="Contacto" title="Hablemos con Eximia Code" intro="Un único formulario general para todo el equipo.">

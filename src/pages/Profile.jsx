@@ -16,6 +16,7 @@ import MovieCard from '../components/MovieCard.jsx';
 import AlbumCard from '../components/AlbumCard.jsx';
 import ProfileNav from '../components/ProfileNav.jsx';
 import RestCard from '../components/RestCard.jsx';
+import RandomProfile from '../components/RandomProfile.jsx';
 import NotFound from './NotFound.jsx';
 
 const ANCHORS = [
@@ -99,6 +100,7 @@ export default function Profile() {
             <div><span className="eyebrow">Continuá explorando</span><h2 id="resto-titulo">Conocé al resto del equipo</h2></div>
             <Link className="card-link" to="/equipo">Ver todo el equipo</Link>
           </div>
+          <RandomProfile members={others} label="¿A quién conocés ahora?" />
           <div className="rest-grid">
             {others.map((m) => <RestCard key={m.id} member={m} />)}
           </div>
