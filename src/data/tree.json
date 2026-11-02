@@ -170,9 +170,57 @@
            ]
           },
           {
+           "name": "RandomProfile",
+           "file": "src/components/RandomProfile.jsx",
+           "descripcion": "Selector accesible que propone un perfil al azar y enlaza a él.",
+           "props": [
+            "members",
+            "label"
+           ],
+           "hooks": [
+            "useState"
+           ],
+           "children": [
+            {
+             "name": "Link",
+             "file": "react-router",
+             "descripcion": "Enlace del router al perfil elegido."
+            }
+           ]
+          },
+          {
            "name": "GithubList",
            "file": "src/components/GithubList.jsx",
            "descripcion": "Enlaces externos a GitHub (.map de members.json)."
+          },
+          {
+           "name": "ProjectLinks",
+           "file": "src/components/ProjectLinks.jsx",
+           "descripcion": "Tarjetas de acceso a Recursos, API, Árbol y Bitácora (.map de una lista).",
+           "props": [
+            "links"
+           ],
+           "children": [
+            {
+             "name": "Link",
+             "file": "react-router",
+             "descripcion": "Enlace del router de cada tarjeta."
+            },
+            {
+             "name": "Icon",
+             "file": "src/components/Icon.jsx",
+             "descripcion": "Íconos SVG decorativos.",
+             "props": [
+              "name",
+              "size"
+             ]
+            }
+           ]
+          },
+          {
+           "name": "Link",
+           "file": "react-router",
+           "descripcion": "Enlaces del router: CTA de contacto y del equipo."
           }
          ]
         },
@@ -219,6 +267,25 @@
              "name": "Link",
              "file": "react-router",
              "descripcion": "Enlace del router al perfil."
+            }
+           ]
+          },
+          {
+           "name": "RandomProfile",
+           "file": "src/components/RandomProfile.jsx",
+           "descripcion": "Selector accesible que propone un perfil al azar y enlaza a él.",
+           "props": [
+            "members",
+            "label"
+           ],
+           "hooks": [
+            "useState"
+           ],
+           "children": [
+            {
+             "name": "Link",
+             "file": "react-router",
+             "descripcion": "Enlace del router al perfil elegido."
             }
            ]
           },
@@ -487,6 +554,17 @@
            "hooks": [
             "useState",
             "useId"
+           ],
+           "children": [
+            {
+             "name": "Icon",
+             "file": "src/components/Icon.jsx",
+             "descripcion": "Íconos SVG decorativos.",
+             "props": [
+              "name",
+              "size"
+             ]
+            }
            ]
           }
          ]
