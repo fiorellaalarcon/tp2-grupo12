@@ -9,6 +9,7 @@ import AnchorBar from '../components/AnchorBar.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import Section from '../components/Section.jsx';
 import GithubList from '../components/GithubList.jsx';
+import PageNavigation from '../components/PageNavigation.jsx';
 
 const ANCHORS = [
   { id: 'formulario', label: 'Formulario' },
@@ -61,6 +62,15 @@ export default function Contact() {
       <Section id="otras-vias" alt eyebrow="Más formas de encontrarnos" title="Otras vías">
         <GithubList />
       </Section>
+
+      <PageNavigation
+      label="Navegación de contacto"
+        links={[
+          { to: '/bitacora', label: 'Bitácora' },
+          { to: '/', label: 'Inicio' },
+          { to: '/equipo', label: 'Ver equipo' }
+        ]}
+      />
     </>
   );
 }

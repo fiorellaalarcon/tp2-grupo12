@@ -8,6 +8,7 @@ import tree from '../data/tree.json';
 import AnchorBar from '../components/AnchorBar.jsx';
 import ComponentTree from '../components/ComponentTree.jsx';
 import Section from '../components/Section.jsx';
+import PageNavigation from '../components/PageNavigation.jsx';
 
 const ANCHORS = [
   { id: 'arbol', label: 'Árbol' },
@@ -53,6 +54,15 @@ export default function RenderTree() {
           <li>Las páginas se cargan con <code>lazy</code>: son hijas de <code>Outlet</code> según la URL, no se renderizan todas a la vez.</li>
         </ul>
       </Section>
+
+      <PageNavigation
+        label="Navegación del árbol"
+          links={[
+          { to: '/api', label: 'API pública' },
+          { to: '/', label: 'Inicio' },
+          { to: '/bitacora', label: 'Bitácora' }
+        ]}
+      />
     </>
   );
 }
