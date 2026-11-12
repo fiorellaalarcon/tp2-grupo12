@@ -61,11 +61,19 @@
       },
       {
         "titulo": "7 · Integramos por Pull Requests",
-        "texto": "**Hicimos:** una rama de desarrollo por integrante (feat/nombre), integradas mediante Pull Requests en un orden que respetó las dependencias entre archivos. Posteriormente, utilizamos ramas de ajustes (fix/nombre-ajustes) para incorporar correcciones y mejoras finales antes de la entrega."
+        "texto": "**Hicimos:** organizamos el desarrollo mediante ramas individuales por integrante (feat/nombre), integradas a través de Pull Requests y respetando las dependencias entre archivos. Luego utilizamos ramas específicas para correcciones y mejoras finales, como fix/fiorella-ajustes y feat/malena-ajustes-finales. Para cerrar el proyecto, incorporamos una rama documental (docs/fiorella-documentacion-final), destinada a actualizar el README, la Bitácora y la documentación del uso de IA."
       },
       {
         "titulo": "8 · Cerramos con aprendizajes",
         "texto": "**Aprendimos:** que en una SPA el foco, el teclado y la carga diferida se diseñan desde el principio."
+      },
+      {
+        "titulo": "9 · Mejoramos la navegación entre secciones",
+        "texto": "**Hicimos:** incorporamos `PageNavigation` como componente reutilizable en cinco páginas y actualizamos el árbol de renderizado. **Decidimos:** ofrecer accesos contextuales sin duplicar estructuras y conservar «Volver arriba» en la Bitácora."
+      },
+      {
+        "titulo": "10 · Cerramos la documentación y la trazabilidad",
+        "texto": "**Hicimos:** revisamos el README, sumamos capturas, responsabilidades, herramientas de IA por integrante y enlaces a los documentos complementarios. **Resultado:** la documentación permite recorrer la aplicación y comprender el proceso, las decisiones y los recursos utilizados."
       }
     ]
   },
@@ -1499,6 +1507,127 @@
         "bitácora",
         "documentación"
       ]
+    },
+    {
+      "id": "tp2-18",
+      "etapa": "TP2",
+      "numero": 18,
+      "fecha": "11/11/2026 · Malena",
+      "titulo": "Malena Jasque — navegación contextual reutilizable entre páginas",
+      "responsable": "Malena Jasque · UX/UI & QA",
+      "bloques": [
+        {
+          "titulo": "Problema → análisis → decisión",
+          "texto": "Al recorrer las secciones internas, era conveniente ofrecer accesos directos a páginas relacionadas y al inicio, sin depender exclusivamente de la sidebar o del botón Atrás del navegador. Se decidió centralizar este patrón en un componente reutilizable para mantener una navegación coherente y evitar repetir estructuras."
+        },
+        {
+          "titulo": "Implementación",
+          "texto": "Se creó `PageNavigation.jsx` y se integró en Recursos JSON, API pública, Árbol de renderizado, Bitácora y Contacto. Se incorporaron enlaces contextuales específicos para cada página y se adaptaron los estilos en `05-perfil.css` y `08-responsive.css`. En la Bitácora se conservó el botón «↑ Volver arriba», con el color de acento del proyecto. También se actualizó `tree.json` para representar el nuevo componente y sus relaciones. El commit registrado utiliza el mensaje «feat: incorpora navegación contextual reutilizable entre páginas»."
+        },
+        {
+          "titulo": "Prueba → integración → aprendizaje",
+          "texto": "Se revisó que los enlaces conduzcan a las rutas previstas y que la navegación conserve su jerarquía visual en escritorio y móvil. Se comprobó también la acción «Volver arriba» y el respeto por `prefers-reduced-motion`. El cambio se organizó en una rama propia y se presentó mediante Pull Request. Aprendizaje: centralizar patrones de navegación mejora la consistencia, reduce duplicaciones y facilita el mantenimiento."
+        }
+      ],
+      "pr": {
+        "numero": 8,
+        "rama": "feat/malena-ajustes-finales",
+        "titulo": "feat: incorpora navegación contextual reutilizable entre páginas",
+        "descripcion": "Incorpora PageNavigation como componente reutilizable para mejorar la navegación entre las distintas secciones de la aplicación.\n\nIntegra enlaces contextuales en las páginas de Recursos JSON, API pública, Árbol de renderizado, Bitácora y Contacto, facilitando el acceso a secciones relacionadas y el regreso al inicio.\n\nAdapta los estilos para mantener la identidad visual del proyecto, con una presentación coherente y responsive.\n\nConserva en la bitácora el botón «Volver arriba», con el color de acento y una flecha hacia arriba.\n\nActualiza tree.json para reflejar la incorporación del nuevo componente y sus relaciones dentro de la estructura de React.\n\nEl objetivo es mejorar la experiencia de navegación, facilitar el recorrido por el proyecto y mantener una implementación reutilizable y consistente.",
+        "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pull/8"
+      },
+      "tipos": [
+        "DESARROLLO",
+        "DECISIÓN",
+        "DOCUMENTACIÓN"
+      ],
+      "etiquetas": [
+        "react",
+        "componentes",
+        "navegación",
+        "reutilización",
+        "responsive",
+        "accesibilidad",
+        "árbol"
+      ]
+    },
+    {
+      "id": "tp2-19",
+      "etapa": "TP2",
+      "numero": 19,
+      "fecha": "11/11/2026 · Fiorella",
+      "titulo": "Fiorella Alarcón — cierre de documentación y declaración de herramientas de IA",
+      "responsable": "Fiorella Alarcón · Product & Frontend",
+      "bloques": [
+        {
+          "titulo": "Problema → análisis → decisión",
+          "texto": "Con las últimas mejoras funcionales incorporadas, la documentación debía reflejar la versión final de la aplicación, mantener las capturas alineadas con la interfaz y ofrecer trazabilidad clara del proceso. También era necesario reunir la declaración de las herramientas de IA utilizadas y vincular los documentos complementarios desde la Bitácora."
+        },
+        {
+          "titulo": "Implementación",
+          "texto": "Se revisó y reorganizó `README.md` para mejorar su estructura Markdown, redacción, índice, descripción de funcionalidades, tecnologías, rutas, accesibilidad, responsabilidades y evidencia de los 15 criterios. Se incorporó la captura de la página de equipo (`docs/capturas/tp2-02-equipo.webp`) y se actualizaron las capturas de las pantallas que recibieron la navegación contextual, para que la documentación refleje la interfaz final. Se corrigieron errores ortográficos y se amplió la explicación de los avatares generados con IA, su personalización y revisión humana. Además, se documentaron las aplicaciones, los modelos y las tareas de IA por integrante, y se enlazaron el README y `docs/IA-PROMPTS.md`."
+        },
+        {
+          "titulo": "Herramientas de IA utilizadas",
+          "texto": "**Fiorella Alarcón:** Claude (Claude Sonnet 5.5) para código y documentación; Gemini (Gemini 3.6 Flash) para consultas de arquitectura y UX/UI; ChatGPT (GPT-6) para revisión documental; Google AI Studio (Gemini 3.1 Flash Image / Nano Banana 2) para recursos visuales. **Malena Jasque:** Claude (Claude Sonnet 5.5) y ChatGPT (GPT-6) como apoyo en portada, catálogo, navegación y consultas de UX/UI; Google AI Studio (Gemini 3.1 Flash Image / Nano Banana 2) para su avatar. **Javier Churquina:** Claude (Claude Sonnet 5.5) para el perfil reutilizable y Spotify bajo demanda; Google AI Studio (Gemini 3.1 Flash Image / Nano Banana 2) para su avatar. **Axel Alva:** Claude (Claude Sonnet 5.5) y ChatGPT (GPT-6) para el formulario, la validación y la API; Google AI Studio (Gemini 3.1 Flash Image / Nano Banana 2) para su avatar. **Selene Pais:** Claude (Claude Sonnet 5.5) para la bitácora, el árbol y la documentación; Google AI Studio (Gemini 3.1 Flash Image / Nano Banana 2) para su avatar. El detalle por integrante también se encuentra en el [README.md](https://github.com/fiorellaalarcon/tp2-grupo12/blob/main/README.md). Los prompts de generación de recursos visuales se reúnen en [IA-PROMPTS.md](https://github.com/fiorellaalarcon/tp2-grupo12/blob/main/docs/IA-PROMPTS.md)."
+        },
+        {
+          "titulo": "Revisión → integración → aprendizaje",
+          "texto": "Se revisaron los enlaces internos, las rutas de las capturas y la correspondencia entre la documentación y las funcionalidades descritas. El cierre documental se presenta en una rama específica mediante Pull Request. Aprendizaje: una documentación útil no solo describe el resultado, sino que permite reconstruir decisiones, responsabilidades, herramientas y evidencias del proceso."
+        }
+      ],
+      "pr": {
+        "numero": 9,
+        "rama": "docs/fiorella-documentacion-final",
+        "titulo": "docs: completa README, bitácora y documentación de IA",
+        "descripcion": "Completa la documentación del proyecto y sincroniza el README y la Bitácora con las últimas modificaciones incorporadas a la aplicación.\n\nReorganiza el README.md, corrige la redacción y el formato Markdown, actualiza la descripción de las funcionalidades e incorpora la captura de la página de Equipo.\n\nAmplía la explicación de los avatares generados con IA y documenta las aplicaciones, los modelos y las tareas realizadas por cada integrante.\n\nActualiza bitacora.json con los registros TP2-18 y TP2-19, incorporando la navegación contextual de Malena y el cierre documental de Fiorella.\n\nAgrega enlaces directos al README y a IA-PROMPTS.md desde la Bitácora para facilitar la consulta de la documentación y la trazabilidad del uso de inteligencia artificial.\n\nEl objetivo es mantener sincronizados el código, las evidencias visuales y la documentación, facilitando la comprensión, evaluación y mantenimiento del proyecto.",
+        "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pull/9"
+      },
+      "tipos": [
+        "DOCUMENTACIÓN",
+        "IA",
+        "DECISIÓN"
+      ],
+      "etiquetas": [
+        "documentación",
+        "readme",
+        "ia",
+        "prompts",
+        "capturas",
+        "trazabilidad"
+      ]
+    },
+    {
+      "id": "tp2-20",
+      "etapa": "TP2",
+      "numero": 20,
+      "fecha": "11/11/2026 · Equipo",
+      "titulo": "Prueba integral final antes de entregar",
+      "responsable": "Equipo Eximia Code",
+      "bloques": [
+        {
+          "titulo": "Qué se revisó",
+          "texto": "Los 15 criterios de la rúbrica y las mejoras incorporadas en la etapa final: navegación contextual, todas las rutas, búsqueda, filtros, API, formularios y documentación."
+        },
+        {
+          "titulo": "Cómo",
+          "texto": "Antes de realizar la entrega, el equipo hizo un recorrido integral con teclado, en tres anchos de pantalla (400, 900 y 1200 px), con tema claro y oscuro, recarga directa de cada URL y comprobación del acceso al repositorio y al sitio publicado sin iniciar sesión."
+        },
+        {
+          "titulo": "Resultado",
+          "texto": "Se realizó una última verificación conjunta del funcionamiento, la presentación responsive, la accesibilidad y la correspondencia entre la aplicación publicada y la documentación. La prueba integral quedó completada antes de la entrega."
+        }
+      ],
+      "tipos": [
+        "PRUEBA"
+      ],
+      "etiquetas": [
+        "accesibilidad",
+        "responsive",
+        "navegación",
+        "integración",
+        "entrega"
+      ]
     }
   ],
   "commits": [
@@ -1886,6 +2015,28 @@
       "descripcion": "Se actualiza: la bitácora con los últimos registros, commits y Pull Requests. Se mejora la redacción de la documentación de tecnologías, APIs, servicios y herramientas, junto con la justificación de la identidad visual y las capturas del proyecto, así como el formato del README.md conforme la plantilla proporcinada por la cátedra con los datos de uso de IA utilizado por cada uno los integrantes del equipo. Importante: mantiene la documentación sincronizada con la versión final de la aplicación.",
       "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/fix/fiorella-ajustes",
       "rama": "fix/fiorella-ajustes"
+    },
+    {
+      "etapa": "TP2",
+      "sha": null,
+      "fecha": "11/11/2026",
+      "persona": "Malena Jasque",
+      "tipo": "Función",
+      "titulo": "feat: incorpora navegación contextual reutilizable entre páginas",
+      "descripcion": "Crea PageNavigation para facilitar el recorrido entre las distintas secciones de la aplicación. Integra la navegación contextual en Recursos JSON, API pública, Árbol de renderizado, Bitácora y Contacto. Adapta los estilos para mantener la coherencia visual y el comportamiento responsive, conservando la opción «Volver arriba» en la bitácora.",
+      "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/feat/malena-navegacion-contextual",
+      "rama": "feat/malena-navegacion-contextual"
+    },
+    {
+      "etapa": "TP2",
+      "sha": null,
+      "fecha": "11/11/2026",
+      "persona": "Fiorella Alarcón",
+      "tipo": "Documentación",
+      "titulo": "docs: completa README, bitácora y documentación de IA",
+      "descripcion": "Revisa la estructura Markdown y la redacción del README.\nIncorpora la captura de Equipo y actualiza las referencias de las capturas de la aplicación.\nAmplía la documentación de los avatares y del uso de IA por integrante.\nActualiza bitacora.json con los registros TP2-18 y TP2-19, sus commits y Pull Requests.\nIncorpora enlaces al README y a IA-PROMPTS.md desde la Bitácora.",
+      "url": "https://github.com/fiorellaalarcon/tp2-grupo12/commits/docs/fiorella-documentacion-final",
+      "rama": "docs/fiorella-documentacion-final"
     }
   ],
   "prs": [
@@ -1984,6 +2135,22 @@
       "responsable": "Fiorella Alarcón",
       "descripcion": "Rama fix/ajustes-fiorella. Extrae ProjectLinks para las tarjetas de «Recorré el proyecto», incorpora RandomProfile en los perfiles, actualiza tree.json y completa la bitácora y el README. Incluye dos commits: refactorización de componentes y actualización documental.",
       "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pull/7"
+    },
+    {
+      "etapa": "TP2",
+      "numero": 8,
+      "titulo": "feat: incorpora navegación contextual reutilizable entre páginas",
+      "responsable": "Malena Jasque",
+      "descripcion": "Incorpora PageNavigation como componente reutilizable para mejorar la navegación entre las distintas secciones de la aplicación.\n\nIntegra enlaces contextuales en las páginas de Recursos JSON, API pública, Árbol de renderizado, Bitácora y Contacto, facilitando el acceso a secciones relacionadas y el regreso al inicio.\n\nAdapta los estilos para mantener la identidad visual del proyecto, con una presentación coherente y responsive.\n\nConserva en la bitácora el botón «Volver arriba», con el color de acento y una flecha hacia arriba.\n\nActualiza tree.json para reflejar la incorporación del nuevo componente y sus relaciones dentro de la estructura de React.\n\nEl objetivo es mejorar la experiencia de navegación, facilitar el recorrido por el proyecto y mantener una implementación reutilizable y consistente.",
+      "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pull/8"
+    },
+    {
+      "etapa": "TP2",
+      "numero": 9,
+      "titulo": "docs: completa README, bitácora y documentación de IA",
+      "responsable": "Fiorella Alarcón",
+      "descripcion": "Completa la documentación del proyecto y sincroniza el README y la Bitácora con las últimas modificaciones incorporadas a la aplicación.\n\nReorganiza el README.md, corrige la redacción y el formato Markdown, actualiza la descripción de las funcionalidades e incorpora la captura de la página de Equipo.\n\nAmplía la explicación de los avatares generados con IA y documenta las aplicaciones, los modelos y las tareas realizadas por cada integrante.\n\nActualiza bitacora.json con los registros TP2-18 y TP2-19, incorporando la navegación contextual de Malena y el cierre documental de Fiorella.\n\nAgrega enlaces directos al README y a IA-PROMPTS.md desde la Bitácora para facilitar la consulta de la documentación y la trazabilidad del uso de inteligencia artificial.\n\nEl objetivo es mantener sincronizados el código, las evidencias visuales y la documentación, facilitando la comprensión, evaluación y mantenimiento del proyecto.",
+      "url": "https://github.com/fiorellaalarcon/tp2-grupo12/pull/9"
     }
   ],
   "pruebas": {

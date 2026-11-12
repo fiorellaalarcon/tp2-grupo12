@@ -2,17 +2,18 @@
 ## Descripción
 **Contexto académico:** IFTS 29 · Tecnicatura Superior en Desarrollo de Software · Desarrollo de Sistemas Web (Front End) · 2.º A · Docente: Luciano Martínez · 2026.
 
-**Eximia Code** es el equipo ficticio de desarrollo de software del Grupo 12, especializado en soluciones de **logística inteligente B2B**, optimización de rutas, cadena de frío y trazabilidad. Este TP2 continúa el proyecto iniciado en el [TP1 del Grupo 12](https://github.com/fiorellaalarcon/tp1-grupo12)y lo transforma en una aplicación de una sola página (SPA) desarrollada con **React 19**, **React Router 8** y **Vite 8**.
+**Eximia Code** es el equipo ficticio de desarrollo de software del Grupo 12, especializado en soluciones de **logística inteligente B2B**, optimización de rutas, cadena de frío y trazabilidad. Este TP2 continúa el proyecto iniciado en el [TP1 del Grupo 12](https://github.com/fiorellaalarcon/tp1-grupo12) y lo transforma en una aplicación de una sola página (SPA), desarrollada con **React 19**, **React Router 8** y **Vite 8**.
 
 La aplicación se organiza mediante una sidebar compartida —que en dispositivos móviles se convierte en un panel desplegable— e incluye:
 
-- **Portada:** presentación del equipo, panel visual y  demo/Simulación interactiva de optimización de rutas.
+- **Portada:** presentación del equipo, panel visual y simulación interactiva de optimización de rutas.
 - **Equipo y perfiles:** cinco perfiles construidos con un componente reutilizable y datos de `members.json`. Incluyen habilidades, películas, discos favoritos e interacciones asociadas a cada rol.
 - **Recursos JSON:** catálogo local de 24 registros ficticios de empresas y servicios logísticos, con búsqueda, filtros y detalle desplegable.
 - **API pública:** consulta del clima de seis ciudades argentinas mediante Open-Meteo, con estados de carga, error y opciones para actualizar o reintentar.
 - **Árbol de renderizado:** representación expandible de la jerarquía de componentes.
 - **Bitácora:** registros del proceso de trabajo del TP1 y TP2, con filtros y desplegables.
 - **Contacto:** formulario único con validación y envío AJAX; permite identificar al integrante destinatario cuando se accede desde un perfil.
+- **Navegación contextual:** enlaces entre secciones relacionadas y acceso al inicio, mediante un componente reutilizable.
 
 Las rutas principales son `/`, `/equipo`, `/equipo/:slug`, `/recursos`, `/api`, `/arbol`, `/bitacora` y `/contacto`. También se incluye una página 404 propia. Las rutas internas pueden abrirse y recargarse directamente en el sitio publicado.
 
@@ -132,7 +133,7 @@ tp2-grupo12/
 └── vite.config.js
 ```
 
-La jerarquía completa de componentes se puede consultar en **Árbol de renderizado** (`/arbol`).
+La jerarquía completa de componentes, incluida la navegación contextual reutilizable `PageNavigation`, se puede consultar en **Árbol de renderizado** (`/arbol`).
 
 ## Rutas
 
@@ -152,7 +153,7 @@ La jerarquía completa de componentes se puede consultar en **Árbol de renderiz
 
 La identidad de Eximia Code combina tecnología y logística mediante una paleta de azul profundo, verde petróleo, azul y turquesa. Se conserva la línea visual desarrollada en el TP1 y se adapta a la arquitectura de componentes de React.
 
-Los colores se definen mediante variables CSS en `src/styles/01-variables.css`, con tema claro y oscuro. El tema respeta la elección guardada por la persona, luego la preferencia del sistema y, por defecto, el modo claro.
+Los colores se definen mediante variables CSS en `src/styles/01-variables.css`, con tema claro y oscuro. El tema respeta la elección guardada por la persona; si no existe, considera la preferencia del sistema y, por defecto, utiliza el modo claro.
 
 ### Paleta de colores
 
@@ -191,7 +192,7 @@ El logo, el panel y los avatares fueron generados con IA y luego seleccionados y
 - Hay un enlace para saltar al contenido principal y el foco se traslada al título en cada cambio de ruta.
 - Los formularios utilizan etiquetas, validación por campo, `aria-invalid` y mensajes asociados mediante `aria-describedby`.
 - Los estilos contemplan `prefers-reduced-motion`, `prefers-contrast`, `forced-colors` y `prefers-color-scheme`.
-- El diseño se adapta a distintos anchos de pantalla, con especial atención a 400, 900 y 1200 px, adaptable a distintos dispositivos sin desplazamiento horizontal.
+- El diseño se adapta a distintos anchos de pantalla, con especial atención a 400, 900 y 1200 px, sin generar desplazamiento horizontal.
 - Las páginas y las imágenes utilizan carga diferida cuando corresponde; Spotify se incorpora bajo demanda y se detiene al cambiar de página.
 
 ## Interacciones y funciones
@@ -229,6 +230,7 @@ La página `Profile` utiliza `members.json` para mostrar la información de cada
 | Árbol de renderizado | Expansión y contracción de nodos, individual o de todo el árbol. |
 | Bitácora | Registros con filtros y desplegables; consulta del historial de commits a pedido. |
 | Contacto | Formulario único con validación y envío AJAX. |
+| Navegación contextual | `PageNavigation` ofrece enlaces relacionados en Recursos JSON, API pública, Árbol, Bitácora y Contacto. |
 | Menú móvil | Panel desplegable con controles de teclado y gestión del foco. |
 
 ## De TP1 a TP2
@@ -247,7 +249,7 @@ Se conserva la identidad visual del TP1 y se reorganiza la implementación para 
 
 ## Capturas
 
-Cada captura corresponde a una pantalla real del sitio publicado. Los archivos están en `docs/capturas/`.
+Las capturas documentan las pantallas del sitio publicado. Los archivos están en `docs/capturas/`; deben mantenerse actualizados cuando se modifica la interfaz.
 
 ### 1. Portada
 
@@ -257,97 +259,113 @@ Cada captura corresponde a una pantalla real del sitio publicado. Los archivos e
 
 ![Portada de Eximia Code con panel visual, demo interactiva y tarjetas del equipo](docs/capturas/tp2-01-portada.webp)
 
-### 2. Perfiles de los integrantes
+### 2. Equipo
 
-Cada captura muestra el perfil individual de un integrante, con la estructura reutilizable de la página, la sidebar compartida, la foto, los datos personales, el rol, el enlace a GitHub, el botón de contacto, la interacción de rol como ejemplo y la navegación entre secciones.
+- **Ruta:** `/equipo`
+- **Archivo:** `docs/capturas/tp2-02-equipo.webp`
+- **Descripción:** presentación de los cinco integrantes mediante tarjetas de perfil, con sus avatares, roles y accesos a las páginas individuales.
 
-#### 2.1. Perfil de Fiorella Alarcón
+![Página de equipo con las tarjetas de los cinco integrantes](docs/capturas/tp2-02-equipo.webp)
+
+### 3. Perfiles de los integrantes
+
+Cada captura muestra el perfil individual de un integrante, con la estructura reutilizable de la página, la sidebar compartida, el avatar, los datos, el rol, el enlace a GitHub, el botón de contacto, la interacción de rol y la navegación entre secciones. Los avatares se generaron con IA a partir de una propuesta visual común de logística y se personalizaron para representar el perfil y la responsabilidad de cada integrante. Luego fueron seleccionados, revisados y optimizados para su uso en la aplicación.
+
+#### 3.1. Perfil de Fiorella Alarcón
 
 - **Ruta:** `/equipo/fiorella`
-- **Archivo:** `docs/capturas/tp2-02-perfil-fiorella.webp`
+- **Archivo:** `docs/capturas/tp2-03-perfil-fiorella.webp`
 - **Descripción:** perfil individual de Fiorella Alarcón con sus datos, rol, enlaces e interacciones.
 
-![Perfil de Fiorella Alarcón](docs/capturas/tp2-02-perfil-fiorella.webp)
+![Perfil de Fiorella Alarcón](docs/capturas/tp2-03-perfil-fiorella.webp)
 
-#### 2.2. Perfil de Axel Alva
+#### 3.2. Perfil de Axel Alva
 
 - **Ruta:** `/equipo/axel`
-- **Archivo:** `docs/capturas/tp2-02-perfil-axel.webp`
+- **Archivo:** `docs/capturas/tp2-03-perfil-axel.webp`
 - **Descripción:** perfil individual de Axel Alva con sus datos, rol, enlaces e interacciones.
 
-![Perfil de Axel Alva](docs/capturas/tp2-02-perfil-axel.webp)
+![Perfil de Axel Alva](docs/capturas/tp2-03-perfil-axel.webp)
 
-#### 2.3. Perfil de Malena Jasque
+#### 3.3. Perfil de Malena Jasque
 
 - **Ruta:** `/equipo/malena`
-- **Archivo:** `docs/capturas/tp2-02-perfil-malena.webp`
+- **Archivo:** `docs/capturas/tp2-03-perfil-malena.webp`
 - **Descripción:** perfil individual de Malena Jasque con sus datos, rol, enlaces e interacciones.
 
-![Perfil de Malena Jasque](docs/capturas/tp2-02-perfil-malena.webp)
+![Perfil de Malena Jasque](docs/capturas/tp2-03-perfil-malena.webp)
 
-#### 2.4. Perfil de Javier Churquina
+#### 3.4. Perfil de Javier Churquina
 
 - **Ruta:** `/equipo/javier`
-- **Archivo:** `docs/capturas/tp2-02-perfil-javier.webp`
+- **Archivo:** `docs/capturas/tp2-03-perfil-javier.webp`
 - **Descripción:** perfil individual de Javier Churquina con sus datos, rol, enlaces e interacciones.
 
-![Perfil de Javier Churquina](docs/capturas/tp2-02-perfil-javier.webp)
+![Perfil de Javier Churquina](docs/capturas/tp2-03-perfil-javier.webp)
 
-#### 2.5. Perfil de Selene Pais
+#### 3.5. Perfil de Selene Pais
 
 - **Ruta:** `/equipo/selene`
-- **Archivo:** `docs/capturas/tp2-02-perfil-selene.webp`
+- **Archivo:** `docs/capturas/tp2-03-perfil-selene.webp`
 - **Descripción:** perfil individual de Selene Pais con sus datos, rol, enlaces e interacciones.
 
-![Perfil de Selene Pais](docs/capturas/tp2-02-perfil-selene.webp)
+![Perfil de Selene Pais](docs/capturas/tp2-03-perfil-selene.webp)
 
-### 3. Menú móvil
+### 4. Menú móvil
 
 - **Ruta:** cualquiera, en pantallas de hasta 900 px
-- **Archivo:** `docs/capturas/tp2-03-menu-movil.webp`
+- **Archivo:** `docs/capturas/tp2-04-menu-movil.webp`
 - **Descripción:** la sidebar convertida en panel desplegable, con la identidad del equipo, los enlaces, los perfiles y la página activa marcada.
 
-![Menú móvil abierto con los enlaces de navegación](docs/capturas/tp2-03-menu-movil.webp)
+![Menú móvil abierto con los enlaces de navegación](docs/capturas/tp2-04-menu-movil.webp)
 
-### 4. Recursos JSON
+### 5. Recursos JSON
 
 - **Ruta:** `/recursos`
-- **Archivo:** `docs/capturas/tp2-04-catalogo.webp`
+- **Archivo:** `docs/capturas/tp2-05-catalogo.webp`
 - **Descripción:** catálogo de 24 clientes ficticios con búsqueda por texto, filtros por tipo y país, botón para restablecer y tarjetas con detalle desplegable.
 
-![Catálogo de recursos con búsqueda y filtros](docs/capturas/tp2-04-catalogo.webp)
+![Catálogo de recursos con búsqueda y filtros](docs/capturas/tp2-05-catalogo.webp)
 
-### 5. API pública
+### 6. API pública
 
 - **Ruta:** `/api`
-- **Archivo:** `docs/capturas/tp2-05-api.webp`
+- **Archivo:** `docs/capturas/tp2-06-api.webp`
 - **Descripción:** clima actual de seis ciudades consultado a Open-Meteo, con nivel de riesgo para la cadena de frío y botones para actualizar o reintentar.
 
-![Página de API pública con el clima de seis ciudades](docs/capturas/tp2-05-api.webp)
+![Página de API pública con el clima de seis ciudades](docs/capturas/tp2-06-api.webp)
 
-### 6. Árbol de renderizado
+### 7. Árbol de renderizado
 
 - **Ruta:** `/arbol`
-- **Archivo:** `docs/capturas/tp2-06-arbol.webp`
+- **Archivo:** `docs/capturas/tp2-07-arbol.webp`
 - **Descripción:** jerarquía de componentes de la aplicación, con archivo, props y hooks de cada nodo, y controles para expandir y contraer.
 
-![Árbol de renderizado expandible de componentes](docs/capturas/tp2-06-arbol.webp)
+![Árbol de renderizado expandible de componentes](docs/capturas/tp2-07-arbol.webp)
 
-### 7. Bitácora
+### 8. Bitácora
 
 - **Ruta:** `/bitacora`
-- **Archivo:** `docs/capturas/tp2-07-bitacora.webp`
+- **Archivo:** `docs/capturas/tp2-08-bitacora.webp`
 - **Descripción:** registros del proceso del TP1 y TP2 con búsqueda, filtros por etapa, tipo y etiqueta, y contenidos desplegables.
 
-![Bitácora de desarrollo con filtros y registros desplegables](docs/capturas/tp2-07-bitacora.webp)
+![Bitácora de desarrollo con filtros y registros desplegables](docs/capturas/tp2-08-bitacora.webp)
 
-### 8. Página no encontrada
+### 10. Página no encontrada
 
-- **Ruta:** `*` (cualquier ruta inexistente)
-- **Archivo:** `docs/capturas/tp2-08-pagina-no-encontrada.webp`
+- **Ruta:** `/contacto`
+- **Archivo:** `docs/capturas/tp2-09-contacto.webp`
 - **Descripción:** página 404 propia, dentro del mismo layout, con botones para volver al inicio, al equipo o al contacto.
 
-![Página 404 con opciones para volver a la aplicación](docs/capturas/tp2-08-pagina-no-encontrada.webp)
+![Formulario de contacto con campos validados, selección del integrante destinatario y envío de mensajes mediante FormSubmit.](docs/capturas/tp2-09-contacto.webp)
+
+### 10. Página no encontrada
+
+- **Ruta:** `*` (cualquier ruta inexistente)
+- **Archivo:** `docs/capturas/tp2-09-pagina-no-encontrada.webp`
+- **Descripción:** página 404 propia, dentro del mismo layout, con botones para volver al inicio, al equipo o al contacto.
+
+![Página 404 con opciones para volver a la aplicación](docs/capturas/tp2-10-pagina-no-encontrada.webp)
 
 
 ## Responsabilidades
@@ -360,23 +378,27 @@ Cada captura muestra el perfil individual de un integrante, con la estructura re
 | Axel Alva | **Backend Developer:** formulario único con validación y envío AJAX, identificación por URL y consumo de la API pública. |
 | Selene Pais | **DevOps & Docs:** bitácora, árbol de renderizado, README, plan de commits, `vercel.json` y despliegue. |
 
+## Uso de IA
+
+El equipo utilizó herramientas de inteligencia artificial como apoyo durante el desarrollo, la consulta técnica, la revisión y la creación de recursos visuales. En cada caso se identifican la aplicación, el modelo y la tarea realizada. Las propuestas se revisaron y adaptaron antes de incorporarlas al proyecto.
+
 ## Uso de IA por integrante
 
 | Integrante | Aplicación | Modelo | Contenido o tarea |
 | --- | --- | --- | --- |
-| Fiorella Alarcón | Claude | Claude Sonnet 5.5 | Apoyo la generación del código base de React, sidebar, tema, rutas, plan de commits y documentación. |
-| Fiorella Alarcón | Gemini | Gemini 3.6 Flash | Consultas de arquitectura para sidebar, header, formulario, menú hamburguesa - consultas sobre posición ux/iu del mismo y `members.json`. |
-| Fiorella Alarcón | ChatGPT | GPT-6 | Revisión del README y organización de capturas. |
+| Fiorella Alarcón | Claude | Claude Sonnet 5.5 | Apoyó la generación y revisión del código base de React, la sidebar, el tema, las rutas, el plan de commits y la documentación. |
+| Fiorella Alarcón | Gemini | Gemini 3.6 Flash | Consultas de arquitectura para la sidebar, el header, el formulario, el menú hamburguesa, su ubicación y criterios de UX/UI, y `members.json`. |
+| Fiorella Alarcón | ChatGPT | GPT-6 | Revisión del README y organización de las capturas. |
 | Fiorella Alarcón | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación de imágenes del logo, panel y avatar. |
-| Malena Jasque | Claude | Claude Sonnet 5.5 | Apoyo en portada, demo, anchor bar, equipo, Armado del JSON del catálogo y breakpoints responsive. |
-| Malena Jasque | ChatGPT | GPT-6 | Consultas sobre anchor bar y ejemplos de catálogos para temática logística. |
+| Malena Jasque | Claude | Claude Sonnet 5.5 | Apoyo en la portada, la demo, la barra de anclas, la página de equipo, la creación del JSON del catálogo y los breakpoints responsive. |
+| Malena Jasque | ChatGPT | GPT-6 | Consultas sobre la barra de anclas y ejemplos de catálogos para la temática logística. |
 | Malena Jasque | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación del avatar. |
-| Javier Churquina | Claude | Claude Sonnet 5.5 | Apoyo en el cógido del perfil reutilizable, vinilo y Spotify bajo demanda. |
+| Javier Churquina | Claude | Claude Sonnet 5.5 | Apoyo en el código del perfil reutilizable, el efecto de vinilo y Spotify bajo demanda. |
 | Javier Churquina | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación del avatar. |
-| Axel Alva | Claude | Claude Sonnet 5.5 | Apoyo en formulario, validación e integración de Open-Meteo y opciones de API pública relacionada a temática logística. |
-| Axel Alva | ChatGPT | GPT-6 | Consulta sobre formulario único y comparación entre FormSubmit y Formspree. |
+| Axel Alva | Claude | Claude Sonnet 5.5 | Apoyo en el formulario, la validación, la integración de Open-Meteo y la exploración de API públicas relacionadas con la temática logística. |
+| Axel Alva | ChatGPT | GPT-6 | Consultas sobre el formulario único y comparación entre FormSubmit y Formspree. |
 | Axel Alva | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación del avatar. |
-| Selene Pais | Claude | Claude Sonnet 5.5 | Apoyo en estructura y código de bitácora, árbol de renderizado y documentación. |
+| Selene Pais | Claude | Claude Sonnet 5.5 | Apoyo en la estructura y el código de la bitácora, el árbol de renderizado y la documentación. |
 | Selene Pais | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación del avatar. |
 
 ## Revisión humana y autoría
@@ -409,8 +431,8 @@ Esta tabla permite localizar en el proyecto la evidencia de cada punto de la rú
 
 ## Colaboración
 
-Los cinco integrantes cuentan con rol de colaborador y acceso aceptado al repositorio público de GitHub.
+Los cinco integrantes cuentan con acceso de colaborador al repositorio público de GitHub.
 
-El trabajo se organizó con una rama `feat/nombre-integrante` por persona, un Pull Request hacia `main` y **commits convencionales** con título y descripción. Para correcciones posteriores se utilizan ramas `fix/nombre-integrante-ajustes` o `fix/nombre-integrante-correcciones`, según el alcance del cambio.
+El trabajo se organizó con una rama `feat/nombre-integrante` por persona, un Pull Request hacia `main` y **commits convencionales** con título y descripción. Para correcciones posteriores se utilizan ramas `fix/nombre-integrante-ajustes`. Para cerrar el proyecto, incorporamos una rama documental `docs/nombre-integrante-documentacion-final`, destinada a actualizar el README, la Bitácora y la documentación del uso de IA.,
 
 El orden, los archivos y las descripciones de los commits están en [`docs/PLAN-COMMITS.md`](docs/PLAN-COMMITS.md); la trazabilidad de decisiones, problemas, commits y Pull Requests está en la sección **Bitácora** de la aplicación.

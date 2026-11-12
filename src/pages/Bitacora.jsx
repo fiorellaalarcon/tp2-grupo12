@@ -49,6 +49,8 @@ function StageTabs({ value, onChange, label }) {
 export default function Bitacora() {
   const uid = useId();
   const { live, status, load } = useCommits();
+  const aiRecord = bitacora.registros.find((registro) => registro.id === 'tp2-19');
+  const aiTools = aiRecord?.bloques.find((bloque) => bloque.titulo === 'Herramientas de IA utilizadas');
 
   /* --- Estado de los registros --- */
   const [query, setQuery] = useState('');
@@ -263,7 +265,18 @@ export default function Bitacora() {
           <article><span>3</span><h3>Adaptación</h3><p>Se modificó, probó y adaptó el resultado al proyecto real y a la rúbrica.</p></article>
           <article><span>4</span><h3>Autoría</h3><p>Decisión final, revisión, pruebas y documentación corresponden al equipo.</p></article>
         </div>
-        <div className="decision-box"><strong>Declaración completa</strong><p>La aplicación y el modelo utilizados por cada integrante están en el <code>README.md</code> del repositorio. Los prompts de imágenes del TP1 están en <code>docs/IA-PROMPTS.md</code>.</p></div>
+        <article className="decision-box">
+          <strong>Aplicaciones y modelos utilizados por integrante</strong>
+          <div className="narrow-content">
+            {aiTools && <RichText text={aiTools.texto} />}
+          </div>
+          <p>
+            <strong>Documentación complementaria:</strong>{' '}
+            <a href="https://github.com/fiorellaalarcon/tp2-grupo12/blob/main/README.md" target="_blank" rel="noopener noreferrer">README.md ↗</a>
+            {' · '}
+            <a href="https://github.com/fiorellaalarcon/tp2-grupo12/blob/main/docs/IA-PROMPTS.md" target="_blank" rel="noopener noreferrer">IA-PROMPTS.md ↗</a>
+          </p>
+        </article>
       </Section>
 
       <Section id="aprendizajes" eyebrow="Cierre" title="Qué aprendimos">
