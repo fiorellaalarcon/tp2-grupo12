@@ -351,19 +351,19 @@ Cada captura muestra el perfil individual de un integrante, con la estructura re
 
 ![Bitácora de desarrollo con filtros y registros desplegables](docs/capturas/tp2-08-bitacora.webp)
 
-### 10. Página no encontrada
+### 9. Contacto
 
 - **Ruta:** `/contacto`
 - **Archivo:** `docs/capturas/tp2-09-contacto.webp`
-- **Descripción:** página 404 propia, dentro del mismo layout, con botones para volver al inicio, al equipo o al contacto.
+- **Descripción:** formulario de contacto con validación de campos, selección del integrante destinatario y envío de mensajes mediante FormSubmit.
 
 ![Formulario de contacto con campos validados, selección del integrante destinatario y envío de mensajes mediante FormSubmit.](docs/capturas/tp2-09-contacto.webp)
 
 ### 10. Página no encontrada
 
 - **Ruta:** `*` (cualquier ruta inexistente)
-- **Archivo:** `docs/capturas/tp2-09-pagina-no-encontrada.webp`
-- **Descripción:** página 404 propia, dentro del mismo layout, con botones para volver al inicio, al equipo o al contacto.
+- **Archivo:** `docs/capturas/tp2-10-pagina-no-encontrada.webp`
+- **Descripción:** Página 404 personalizada e integrada en el layout compartido, con opciones de navegación para regresar al inicio, consultar el equipo o acceder al contacto.
 
 ![Página 404 con opciones para volver a la aplicación](docs/capturas/tp2-10-pagina-no-encontrada.webp)
 
@@ -390,7 +390,7 @@ El equipo utilizó herramientas de inteligencia artificial como apoyo durante el
 | Fiorella Alarcón | Gemini | Gemini 3.6 Flash | Consultas de arquitectura para la sidebar, el header, el formulario, el menú hamburguesa, su ubicación y criterios de UX/UI, y `members.json`. |
 | Fiorella Alarcón | ChatGPT | GPT-6 | Revisión del README y organización de las capturas. |
 | Fiorella Alarcón | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación de imágenes del logo, panel y avatar. |
-| Malena Jasque | Claude | Claude Sonnet 5.5 | Apoyo en la portada, la demo, la barra de anclas, la página de equipo, la creación del JSON del catálogo y los breakpoints responsive. |
+| Malena Jasque | Claude | Claude Sonnet 5.5 | Apoyo en el código de la portada, la demo, la barra de anclas, la página de equipo, la creación del JSON del catálogo y los breakpoints responsive. |
 | Malena Jasque | ChatGPT | GPT-6 | Consultas sobre la barra de anclas y ejemplos de catálogos para la temática logística. |
 | Malena Jasque | Google AI Studio | Gemini 3.1 Flash Image (Nano Banana 2) | Generación del avatar. |
 | Javier Churquina | Claude | Claude Sonnet 5.5 | Apoyo en el código del perfil reutilizable, el efecto de vinilo y Spotify bajo demanda. |
