@@ -2,7 +2,7 @@
 
 Este documento registra los prompts utilizados como apoyo en la generación y revisión de recursos visuales del proyecto. La IA se utilizó como herramienta asistida: el equipo seleccionó, revisó y adaptó los resultados antes de incorporarlos al sitio.
 - IA utilizada, modelo:
-- **Nano Banana 2 (gemini-3.1-flash-image)**. 
+- **Google AI Studio (Gemini 3.1 Flash Image / Nano Banana 2) para recursos visuales.**. 
 - **Plan:** gratuito.
 Se utilizó para:
 - Generar las imágenes del logo, panel y avatares de los integrantes del grupo.
