@@ -36,6 +36,18 @@ img, svg, iframe, video { max-width: 100%; }
 @media (max-width: 700px) {
   .team-grid { grid-template-columns: repeat(2, minmax(0, 220px)); }
   .form-grid { grid-template-columns: 1fr; }
+
+  /* Navegación final entre páginas */
+  .page-final-nav {
+    gap: .45rem;
+  }
+
+  .page-final-nav .card-link {
+    min-height: 50px;
+    padding: .5rem .35rem;
+    font-size: .82rem;
+    line-height: 1.2;
+  }
 }
 @media (max-width: 400px) {
   .team-grid, .rest-grid, .media-grid, .skills-grid { grid-template-columns: minmax(0, 300px); justify-content: center; }

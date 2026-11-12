@@ -10,6 +10,7 @@ import catalogo from '../data/catalogo.json';
 import AnchorBar from '../components/AnchorBar.jsx';
 import CatalogCard from '../components/CatalogCard.jsx';
 import Section from '../components/Section.jsx';
+import PageNavigation from '../components/PageNavigation.jsx';
 
 const ANCHORS = [
   { id: 'filtros', label: 'Búsqueda y filtros' },
@@ -102,6 +103,15 @@ export default function Catalog() {
       <Section id="acerca" eyebrow="Fuente" title="Acerca del catálogo">
         <p>Los datos están en <code>src/data/catalogo.json</code> y se importan como módulo: no hay pedidos de red. Cada registro tiene id, nombre, tipo, ciudad, país, año de alta, servicio, tecnología, entregas mensuales y descripción. FreshRoute, entre otros, es un cliente ficticio creado para este trabajo.</p>
       </Section>
+      
+      <PageNavigation
+      label="Navegación de recursos"
+        links={[
+          { to: '/equipo', label: 'Ver equipo' },
+          { to: '/', label: 'Inicio' },
+          { to: '/api', label: 'API pública' }
+        ]}
+      />
     </>
   );
 }

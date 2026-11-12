@@ -14,6 +14,7 @@ import LogEntry from '../components/LogEntry.jsx';
 import RichText from '../components/RichText.jsx';
 import Section from '../components/Section.jsx';
 import useCommits from '../hooks/useCommits.js';
+import PageNavigation from '../components/PageNavigation.jsx';
 
 const ANCHORS = [
   { id: 'introduccion', label: 'Introducción' },
@@ -277,12 +278,15 @@ export default function Bitacora() {
         <div className="continuity-grid">
           {bitacora.proximos.map((item) => <article key={item.titulo}><h3>{item.titulo}</h3><p><RichText text={item.texto} /></p></article>)}
         </div>
-        <nav className="profile-nav bitacora-final-nav" aria-label="Navegación de la bitácora">
-          <Link className="card-link" to="/equipo">Ver equipo</Link>
-          <Link className="card-link" to="/">Inicio</Link>
-          <a className="card-link" href="#introduccion" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }}>Volver arriba</a>
-        </nav>
       </Section>
+      <PageNavigation
+        label="Navegación de la bitácora"
+          links={[
+          { to: '/equipo', label: 'Ver equipo' },
+          { to: '/', label: 'Inicio' }
+          ]}
+        showTop
+      />
     </>
   );
 }

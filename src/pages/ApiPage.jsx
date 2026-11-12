@@ -8,6 +8,7 @@
 import AnchorBar from '../components/AnchorBar.jsx';
 import Section from '../components/Section.jsx';
 import useOpenMeteo from '../hooks/useOpenMeteo.js';
+import PageNavigation from '../components/PageNavigation.jsx';
 
 /* Constante fuera del componente: mantiene la misma referencia entre renders (el hook la usa como dependencia). */
 const CITIES = [
@@ -102,6 +103,14 @@ export default function ApiPage() {
         <p><strong>Open-Meteo</strong> es una API meteorológica abierta y gratuita. Esta pantalla pide temperatura, humedad, viento y código de clima de seis ciudades con una sola consulta, sin clave de acceso.</p>
         <p className="muted">Endpoint: <code>api.open-meteo.com/v1/forecast</code> · Documentación en <a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener noreferrer">open-meteo.com ↗</a>. Los niveles de riesgo son una regla simple de demostración, no una recomendación operativa.</p>
       </Section>
+      <PageNavigation
+        label="Navegación de la API"
+          links={[
+          { to: '/recursos', label: 'Recursos JSON' },
+          { to: '/', label: 'Inicio' },
+          { to: '/arbol', label: 'Árbol de renderizado' }
+        ]}
+      />
     </>
   );
 }
